@@ -4,10 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mukul Sharma</title>
-<meta name="description" content="Mukul Sharma takes software from its first commit to version 1.0, and builds the AI systems that help ship it. Senior Staff Engineer at Adobe.">
+<meta name="description" content="Mukul Sharma takes software from its first commit to version 1.0, and uses AI to help teams ship faster. Senior Staff Engineer at Adobe.">
 <meta property="og:title" content="Mukul Sharma">
-<meta property="og:description" content="I take software from its first commit to version 1.0, and lately I build the AI that helps ship it.">
+<meta property="og:description" content="I take software from its first commit to version 1.0, and lately I use AI to help teams ship faster.">
 <meta property="og:url" content="https://mukul.app/">
+<meta property="og:image" content="https://mukul.app/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Mukul Sharma's career map: a hand-drawn timeline of products shipped from 2012 to 2026.">
+<meta name="twitter:card" content="summary_large_image">
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://mukul.app/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -16,253 +21,498 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root {
-  --paper: #f4f0e8;
-  --ink: #1c1a17;
-  --soft: #5d574e;
-  --hair: #d9d2c5;
-  --mark: #c2410c;
-  --serif: "Newsreader", Georgia, "Times New Roman", serif;
-  --display: "Instrument Serif", "Newsreader", Georgia, serif;
-  --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+:root{
+  --paper:#fbfaf7;--ink:#16181d;--muted:#575c66;--faint:#dfe1e6;--mark:#2346d8;--wash:#f1f1ee;
+  --serif:"Newsreader",Georgia,"Times New Roman",serif;
+  --display:"Instrument Serif","Newsreader",Georgia,serif;
+  --mono:"JetBrains Mono",ui-monospace,"SF Mono",Menlo,monospace;
 }
-@media (prefers-color-scheme: dark) {
-  :root {
-    --paper: #15140f;
-    --ink: #ebe5d8;
-    --soft: #a59d8f;
-    --hair: #34302a;
-    --mark: #f0874f;
-  }
+@media (prefers-color-scheme:dark){
+  :root{--paper:#0e1014;--ink:#e8eaf0;--muted:#9ba1ad;--faint:#2a2e37;--mark:#8aa0ff;--wash:#161920}
 }
-* { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; }
-body {
-  margin: 0;
-  background: var(--paper);
-  color: var(--ink);
-  font: 400 1.1875rem/1.55 var(--serif);
-  font-optical-sizing: auto;
-  text-rendering: optimizeLegibility;
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.125rem/1.5 var(--serif);font-optical-sizing:auto;text-rendering:optimizeLegibility}
+::selection{background:var(--mark);color:var(--paper)}
+a{color:inherit;text-decoration:underline;text-decoration-color:var(--mark);text-decoration-thickness:1px;text-underline-offset:.2em}
+a:hover{color:var(--mark)}
+:focus-visible{outline:2px solid var(--mark);outline-offset:3px;border-radius:2px}
+
+.wrap{max-width:76rem;margin:0 auto;padding:0 2rem}
+.wide{max-width:92rem;margin:0 auto;padding:0 1.25rem}
+.k{font:500 .8125rem/1.4 var(--mono);letter-spacing:.06em;color:var(--muted);text-transform:lowercase;margin:0}
+.h{font:400 clamp(2.1rem,4.2vw,3.4rem)/1.04 var(--display);letter-spacing:-.01em;margin:.6rem 0 .5rem;max-width:26ch}
+.h em{color:var(--mark);font-style:normal}
+.cap{font:italic 400 1.2rem/1.4 var(--serif);margin:0;max-width:40rem}
+
+.masthead{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:1.6rem 0 0}
+.masthead .name{font:400 1.45rem var(--display);text-decoration:none}
+.masthead nav{display:flex;gap:1.3rem;font:400 .8125rem var(--mono);letter-spacing:.04em}
+.masthead nav a{text-decoration:none;color:var(--muted)}
+.masthead nav a:hover{color:var(--mark)}
+
+.opening{padding-top:4.5rem;padding-bottom:1.5rem}
+.opening h1{font:400 clamp(2.5rem,5.6vw,4.6rem)/1.02 var(--display);letter-spacing:-.015em;margin:.8rem 0 1rem;max-width:19ch}
+.opening h1 em{color:var(--mark);font-style:normal}
+
+/* inked svg language, after the README diagram kit */
+svg.ink{display:block;width:100%;height:auto;overflow:visible}
+svg.ink *{fill:none;stroke:var(--ink);stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+svg.ink .thin{stroke-width:1.2}
+svg.ink .faint{stroke:var(--faint)}
+svg.ink .d{stroke-dasharray:4 6}
+svg.ink .m{stroke:var(--mark)}
+svg.ink .f{fill:var(--paper)}
+svg.ink .w{fill:var(--wash)}
+svg.ink .inkf{fill:var(--ink)}
+svg.ink .mf{fill:var(--mark);stroke:var(--mark)}
+svg.ink text,svg.ink tspan{stroke:none;fill:var(--ink);font:400 13px var(--mono)}
+svg.ink .t{fill:var(--muted);font-size:12px}
+svg.ink .si{font:italic 400 17px var(--serif);fill:var(--ink)}
+svg.ink .mt,svg.ink .mt tspan{fill:var(--mark)}
+svg.ink .trunk{stroke-width:2.25}
+svg.ink .st{font-size:13px;font-weight:500;letter-spacing:.02em}
+svg.ink .sy{fill:var(--muted);font-size:12px;font-weight:400}
+svg.ink .nm{font:400 24px var(--display)}
+svg.ink .dt{fill:var(--muted);font-size:12px}
+svg.ink .no{fill:var(--muted);font-size:11px}
+svg.ink .note{font:italic 400 16px var(--serif);fill:var(--muted)}
+svg.ink .dot{fill:var(--paper)}
+svg.ink .next .dot{fill:var(--mark)}
+svg.ink a.node{cursor:pointer;outline:none}
+svg.ink a.node:hover .dot,svg.ink a.node:focus-visible .dot{fill:var(--mark);stroke:var(--mark)}
+svg.ink a.node:hover .nm,svg.ink a.node:focus-visible .nm{fill:var(--mark)}
+svg.ink a.node:focus-visible .glyph{outline:2px solid var(--mark);outline-offset:6px}
+svg.ink a.node:focus-visible .nm{text-decoration:underline}
+svg.ink .station{cursor:default}
+
+.mapfig{margin:2.5rem 0 0}
+svg.ink a{text-decoration:none}
+.maplegend{display:flex;flex-wrap:wrap;gap:.4rem 1.6rem;margin:1rem 0 0;padding:0;list-style:none;font:400 .75rem var(--mono);color:var(--muted)}
+.maplegend svg{display:inline-block;vertical-align:-3px;width:28px;height:14px;margin-right:.4rem}
+
+.cap1{font:400 1rem/1.45 var(--serif);margin:0}
+
+
+.part{padding-top:5rem}
+.rule{border:0;border-top:1px solid var(--ink);margin:5rem 0 0}
+
+.ai{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,22rem);gap:2rem 5rem;align-items:start;margin-top:2.5rem}
+.stats{list-style:none;margin:0;padding:0}
+.stats li{display:grid;grid-template-columns:7.5rem minmax(0,1fr);gap:0 1.25rem;align-items:center;padding:1rem 0;border-top:1px solid var(--faint)}
+.stats li:first-child{border-top:0;padding-top:0}
+.stats b{font:400 3.2rem/1 var(--display);font-weight:400}
+.stats span{font:400 1rem/1.45 var(--serif);color:var(--ink)}
+.ai .after{margin:1.75rem 0 0;font:italic 400 1.05rem/1.5 var(--serif);color:var(--muted);max-width:36rem}
+.scaffold{max-width:22rem}
+
+.tools{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:3.5rem 5rem;margin-top:2.5rem}
+.tool{margin:0}
+.tool-head{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;border-top:1px solid var(--ink);padding-top:.7rem;margin-bottom:1.1rem}
+.tn{font:400 1.75rem/1.1 var(--display);text-decoration:none}
+.tool{position:relative}.tn::before{content:"";position:absolute;inset:0}.tn::after{content:"\2197";margin-left:.35rem;font:400 .95rem var(--mono);color:var(--muted);vertical-align:.35em;display:inline-block;text-decoration:none}.tn:focus-visible{outline:none}.tool:has(.tn:focus-visible){outline:2px solid var(--mark);outline-offset:10px;border-radius:2px}.tool:hover .tn,.tool:has(.tn:focus-visible) .tn{color:var(--mark);text-decoration:underline;text-underline-offset:.15em}.tool:hover .tn::after{color:var(--mark)}.tool svg.ink *{transition:stroke .15s}.tool:hover svg.ink *:not(text):not(tspan){stroke:var(--mark)}@media (prefers-reduced-motion:reduce){.tool svg.ink *{transition:none}}
+.lang{font:400 .75rem var(--mono);color:var(--muted)}
+.tool svg{max-width:26rem}
+.tool .cap1{margin-top:1rem;font-style:italic;color:var(--ink);max-width:30rem}
+
+.papers{list-style:none;margin:2rem 0 0;padding:0;max-width:46rem}
+.papers li{padding:.8rem 0;border-top:1px solid var(--faint)}
+.papers li:first-child{border-top:0;padding-top:0}
+.papers .meta{display:block;font:400 .75rem/1.6 var(--mono);color:var(--muted)}
+
+.closing{padding:5rem 0 3rem;margin-top:5rem;border-top:1px solid var(--ink)}
+.closing .big{font:400 clamp(2rem,4.4vw,3.3rem)/1.06 var(--display);margin:0 0 2.2rem;max-width:20ch}
+.closing .big em{color:var(--mark);font-style:normal}
+.closing .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem 2rem;font:400 .8125rem var(--mono);color:var(--muted)}
+.closing nav{display:flex;flex-wrap:wrap;gap:.6rem 1.4rem}
+
+@media (max-width:68rem){
+  .ai{grid-template-columns:minmax(0,1fr)}
+  .tools{gap:3rem 3rem}
 }
-::selection { background: var(--mark); color: var(--paper); }
-a { color: inherit; text-decoration: underline; text-decoration-color: var(--mark); text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
-a:hover { color: var(--mark); }
-:focus-visible { outline: 2px solid var(--mark); outline-offset: 3px; }
-
-.page { max-width: 64rem; margin: 0 auto; padding: 0 1.5rem; }
-.mono { font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.01em; }
-
-.masthead { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; padding: 1.75rem 0; }
-.masthead .name { font-family: var(--display); font-size: 1.5rem; text-decoration: none; }
-.masthead nav { display: flex; gap: 1.4rem; }
-.masthead nav a { text-decoration: none; color: var(--soft); }
-.masthead nav a:hover { color: var(--mark); }
-
-.opening { padding: 7vh 0 10vh; }
-.opening h1 {
-  font-family: var(--display);
-  font-weight: 400;
-  font-size: clamp(2.6rem, 6.4vw, 5.1rem);
-  line-height: 1.02;
-  letter-spacing: -0.015em;
-  margin: 0;
-  max-width: 15ch;
+@media (max-width:46rem){
+  body{font-size:1.0625rem}
+  .wrap,.wide{padding:0 1rem}
+  .masthead nav{gap:1rem}
+  .opening{padding-top:3rem;padding-bottom:.5rem}
+      .tools{grid-template-columns:minmax(0,1fr)}
+  .stats li{grid-template-columns:5.5rem minmax(0,1fr)}
+  .stats b{font-size:2.6rem}
+  .part{padding-top:3.5rem}
+  .rule{margin-top:3.5rem}
+  .closing{margin-top:3.5rem}
 }
-.opening h1 em { color: var(--mark); }
-.opening .sub { margin: 2.75rem 0 0 auto; max-width: 30rem; color: var(--soft); }
-.opening .sub p { margin: 0 0 1rem; }
-.opening .sub .mono { color: var(--ink); }
 
-.part { display: grid; grid-template-columns: 11rem minmax(0, 1fr); gap: 0 2.5rem; padding: 3.5rem 0; border-top: 1px solid var(--ink); }
-.part > h2 { margin: 0; font-family: var(--mono); font-weight: 500; font-size: 0.8rem; color: var(--soft); padding-top: 0.45rem; }
+.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+svg.ink .glyph *{vector-effect:non-scaling-stroke}
+svg.ink .st{font-size:12px;font-weight:500;letter-spacing:.02em}
+svg.ink .note{font-size:15px}
+.maparea{position:relative}
+.pin summary{list-style:none;cursor:pointer}
+.pin summary::-webkit-details-marker{display:none}
+.hp{position:absolute;margin:0}
+.hp>summary{display:block;width:100%;height:100%;border-radius:6px}
+.hp>summary:hover{outline:1.5px dashed var(--faint);outline-offset:2px}
+.hp>summary:focus-visible{outline:2px solid var(--mark);outline-offset:2px}
+.hp[open]{z-index:5}
+.pop{position:absolute;width:19rem;background:var(--paper);border:1.5px solid var(--ink);border-radius:4px;padding:.85rem 1rem .9rem;z-index:6}
+.hp.dn .pop{top:calc(100% + 6px)}
+.hp.upw .pop{bottom:calc(100% + 6px)}
+.hp.al-c .pop{left:50%;transform:translateX(-50%)}
+.hp.al-l .pop{left:0}
+.hp.al-r .pop{right:0}
+.pop h3,.vpop h3{font:400 1.5rem/1.1 var(--display);margin:0 0 .2rem}
+.pm{font:400 .75rem/1.5 var(--mono);color:var(--muted);margin:0 0 .45rem}
+.pc{font:400 1rem/1.45 var(--serif);margin:0}
+.cite{display:inline-block;margin-top:.5rem;font:400 .75rem/1.5 var(--mono);color:var(--muted)}
 
-.log { list-style: none; margin: 0; padding: 0; position: relative; }
-.log::before { content: ""; position: absolute; left: 0.3rem; top: 0.9rem; bottom: 0.9rem; width: 1px; background: var(--hair); }
-.log li { position: relative; display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); gap: 0 1.5rem; padding: 0 0 2.4rem 1.6rem; }
-.log li:last-child { padding-bottom: 0; }
-.log li::before { content: ""; position: absolute; left: 0; top: 0.62rem; width: 0.65rem; height: 0.65rem; border-radius: 50%; background: var(--paper); border: 1.5px solid var(--ink); }
-.log li.next::before { border-color: var(--mark); background: var(--mark); }
-.log .when { padding-top: 0.35rem; color: var(--soft); line-height: 1.5; }
-.log .when b { display: block; color: var(--ink); font-weight: 500; }
-.log li.next .when b { color: var(--mark); }
-.log h3 { margin: 0 0 0.35rem; font-family: var(--display); font-weight: 400; font-size: 1.9rem; line-height: 1.1; }
-.log h3 span { font-family: var(--serif); font-style: italic; font-size: 1.05rem; color: var(--soft); white-space: nowrap; }
-.log p { margin: 0; max-width: 36rem; }
-.log .cite { margin-top: 0.5rem; color: var(--soft); }
+.vlist{display:none;list-style:none;margin:1.5rem 0 0;padding:0}
+.vlist li{position:relative;padding-left:3.5rem}
+.vlist li::before{content:"";position:absolute;left:11px;top:0;bottom:0;border-left:2.25px solid var(--ink)}
+.vlist .v-start{height:14px}
+.vlist .v-start::after{content:"";position:absolute;left:7.5px;top:0;width:10px;height:10px;border-radius:50%;background:var(--ink)}
+.vlist .v-st summary{padding:.3rem 0;font:500 .8125rem/1.4 var(--mono)}
+.vlist .v-st::after{content:"";position:absolute;left:7px;top:.62rem;width:10px;height:10px;background:var(--ink)}
+.vlist .vy{color:var(--muted);font-weight:400;margin-left:.4rem}
+.vlist .v-pr summary{display:grid;grid-template-columns:minmax(0,1fr) 7rem;gap:0 .75rem;align-items:center;padding:.45rem 0 .25rem;min-height:4.9rem}
+.vlist .vbr{position:absolute;left:0;top:0;width:44px;height:40px}
+.vlist .vdot{position:absolute;left:31px;top:33px;width:14px;height:14px;border-radius:50%;border:1.75px solid var(--ink);background:var(--paper)}
+.vlist .vt{display:flex;flex-direction:column;align-self:start;padding-top:.85rem}
+.vlist .vname{font:400 1.4rem/1.05 var(--display)}
+.vlist .vmeta{font:400 .75rem/1.5 var(--mono);color:var(--muted);margin-top:.2rem}
+.vlist .vg{width:7rem}
+.vlist .v-end::before{border-left:2.25px dashed var(--mark);bottom:auto;height:34px}
+.vlist .v-end .vdot{left:5px;top:33px;width:15px;height:15px;background:var(--mark);border-color:var(--mark)}
+.vlist .v-end .vmeta{color:var(--mark)}
+.vlist .vpop{padding:.1rem 0 .9rem}
+.vlist .v-st .vpop{padding:0 0 .5rem}
+.vlist .v-st .vpop .pc{font:400 .8125rem/1.5 var(--mono);color:var(--muted)}
+.vlist summary:focus-visible{outline:2px solid var(--mark);outline-offset:2px;border-radius:3px}
+.vlist summary:hover .vname,.vlist summary:hover .vn,.vlist details[open] .vname,.vlist details[open] .vn{color:var(--mark)}
+.vlist details[open] .vdot{background:var(--mark);border-color:var(--mark)}
 
-.prose p { margin: 0 0 1.1rem; max-width: 38rem; }
-.prose p:first-child { font-size: 1.4rem; line-height: 1.4; }
-.prose p:last-child { margin-bottom: 0; }
-
-.index { list-style: none; margin: 0; padding: 0; }
-.index li { display: grid; grid-template-columns: minmax(0, 13rem) minmax(0, 1fr) auto; gap: 0 1.5rem; align-items: baseline; padding: 0.85rem 0; border-bottom: 1px solid var(--hair); }
-.index li:first-child { padding-top: 0.2rem; }
-.index li:last-child { border-bottom: 0; }
-.index .t { font-family: var(--display); font-size: 1.45rem; line-height: 1.2; }
-.index .d { color: var(--soft); }
-.index .mono { color: var(--soft); white-space: nowrap; }
-
-.papers { margin: 0; padding: 0; list-style: none; }
-.papers li { margin: 0 0 1rem; max-width: 40rem; }
-.papers li:last-child { margin: 0; }
-.papers .mono { display: block; color: var(--soft); margin-top: 0.15rem; }
-
-.closing { padding: 5rem 0 3rem; border-top: 1px solid var(--ink); }
-.closing p.big { font-family: var(--display); font-size: clamp(2rem, 4.6vw, 3.4rem); line-height: 1.08; margin: 0 0 2.5rem; max-width: 20ch; }
-.closing .row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem 2rem; color: var(--soft); }
-.closing .row nav { display: flex; flex-wrap: wrap; gap: 0.6rem 1.4rem; }
-
-@media (max-width: 46rem) {
-  body { font-size: 1.0625rem; }
-  .masthead nav { gap: 1rem; }
-  .opening { padding: 3.5rem 0 4.5rem; }
-  .opening .sub { margin-top: 2rem; }
-  .part { grid-template-columns: minmax(0, 1fr); padding: 2.5rem 0; }
-  .part > h2 { padding: 0 0 1.5rem; }
-  .log li { grid-template-columns: minmax(0, 1fr); }
-  .log .when { padding: 0.1rem 0 0.3rem; }
-  .log .when b { display: inline; margin-right: 0.6rem; }
-  .log h3 { font-size: 1.6rem; }
-  .index li { grid-template-columns: minmax(0, 1fr) auto; }
-  .index .d { grid-column: 1 / -1; }
-  .prose p:first-child { font-size: 1.25rem; }
+@media (max-width:70rem){
+  .mapfig .maparea,.mapfig + .wrap .maplegend{display:none}
+  .vlist{display:block}
 }
-</style>
+@media (max-width:46rem){
+  .opening{padding-top:2rem}
+  .part{padding-top:2.25rem}
+  .part .k[style]{margin-top:1.75rem !important}
+  .ai figure[style]{margin-top:1.5rem !important}
+  .stats[style]{margin-top:1.5rem !important}
+  .stats li{padding:.65rem 0}
+  .ai .after{margin-top:1.1rem}
+  .scaffold{max-width:18.5rem}
+  .tools{gap:2.25rem;margin-top:1.75rem}
+  .tool-head{margin-bottom:.6rem}
+  .tool .cap1{margin-top:.6rem}
+  .papers{margin-top:1.25rem}
+  .papers li{padding:.6rem 0}
+  .closing{margin-top:2.5rem;padding:2.75rem 0 2rem}
+  .closing .big{margin-bottom:1.5rem}
+}
+
+.maparea:has(#h-touchtest>summary:hover) #g-touchtest .dot,.maparea:has(#h-touchtest[open]) #g-touchtest .dot{fill:var(--mark);stroke:var(--mark)}.maparea:has(#h-touchtest>summary:hover) #g-touchtest .nm,.maparea:has(#h-touchtest[open]) #g-touchtest .nm{fill:var(--mark)}
+.maparea:has(#h-mpulse>summary:hover) #g-mpulse .dot,.maparea:has(#h-mpulse[open]) #g-mpulse .dot{fill:var(--mark);stroke:var(--mark)}.maparea:has(#h-mpulse>summary:hover) #g-mpulse .nm,.maparea:has(#h-mpulse[open]) #g-mpulse .nm{fill:var(--mark)}
+.maparea:has(#h-muse>summary:hover) #g-muse .dot,.maparea:has(#h-muse[open]) #g-muse .dot{fill:var(--mark);stroke:var(--mark)}.maparea:has(#h-muse>summary:hover) #g-muse .nm,.maparea:has(#h-muse[open]) #g-muse .nm{fill:var(--mark)}
+.maparea:has(#h-express>summary:hover) #g-express .dot,.maparea:has(#h-express[open]) #g-express .dot{fill:var(--mark);stroke:var(--mark)}.maparea:has(#h-express>summary:hover) #g-express .nm,.maparea:has(#h-express[open]) #g-express .nm{fill:var(--mark)}
+.maparea:has(#h-fve>summary:hover) #g-fve .dot,.maparea:has(#h-fve[open]) #g-fve .dot{fill:var(--mark);stroke:var(--mark)}.maparea:has(#h-fve>summary:hover) #g-fve .nm,.maparea:has(#h-fve[open]) #g-fve .nm{fill:var(--mark)}
+.maparea:has(#h-forge>summary:hover) #g-forge .dot,.maparea:has(#h-forge[open]) #g-forge .dot{fill:var(--mark);stroke:var(--mark)}.maparea:has(#h-forge>summary:hover) #g-forge .nm,.maparea:has(#h-forge[open]) #g-forge .nm{fill:var(--mark)}
+.maparea:has(#h-architect>summary:hover) #g-architect .dot,.maparea:has(#h-architect[open]) #g-architect .dot{fill:var(--mark);stroke:var(--mark)}.maparea:has(#h-architect>summary:hover) #g-architect .nm,.maparea:has(#h-architect[open]) #g-architect .nm{fill:var(--mark)}
+.maparea:has(#h-assembler>summary:hover) #g-assembler .dot,.maparea:has(#h-assembler[open]) #g-assembler .dot{fill:var(--mark);stroke:var(--mark)}.maparea:has(#h-assembler>summary:hover) #g-assembler .nm,.maparea:has(#h-assembler[open]) #g-assembler .nm{fill:var(--mark)}
+.maparea:has(#h-sumtotal>summary:hover) #g-sumtotal .st,.maparea:has(#h-sumtotal[open]) #g-sumtotal .st{fill:var(--mark)}.maparea:has(#h-sumtotal>summary:hover) #g-sumtotal path,.maparea:has(#h-sumtotal[open]) #g-sumtotal path{stroke:var(--mark)}
+.maparea:has(#h-soasta>summary:hover) #g-soasta .st,.maparea:has(#h-soasta[open]) #g-soasta .st{fill:var(--mark)}.maparea:has(#h-soasta>summary:hover) #g-soasta path,.maparea:has(#h-soasta[open]) #g-soasta path{stroke:var(--mark)}
+.maparea:has(#h-8x8>summary:hover) #g-8x8 .st,.maparea:has(#h-8x8[open]) #g-8x8 .st{fill:var(--mark)}.maparea:has(#h-8x8>summary:hover) #g-8x8 path,.maparea:has(#h-8x8[open]) #g-8x8 path{stroke:var(--mark)}
+.maparea:has(#h-speak>summary:hover) #g-speak .st,.maparea:has(#h-speak[open]) #g-speak .st{fill:var(--mark)}.maparea:has(#h-speak>summary:hover) #g-speak path,.maparea:has(#h-speak[open]) #g-speak path{stroke:var(--mark)}
+.maparea:has(#h-mobileiron>summary:hover) #g-mobileiron .st,.maparea:has(#h-mobileiron[open]) #g-mobileiron .st{fill:var(--mark)}.maparea:has(#h-mobileiron>summary:hover) #g-mobileiron path,.maparea:has(#h-mobileiron[open]) #g-mobileiron path{stroke:var(--mark)}
+.maparea:has(#h-adobe>summary:hover) #g-adobe .st,.maparea:has(#h-adobe[open]) #g-adobe .st{fill:var(--mark)}.maparea:has(#h-adobe>summary:hover) #g-adobe path,.maparea:has(#h-adobe[open]) #g-adobe path{stroke:var(--mark)}</style>
 </head>
 <body>
-<div class="page">
+<div class="wrap">
   <header class="masthead">
     <a class="name" href="/">Mukul Sharma</a>
-    <nav class="mono" aria-label="Main">
+    <nav aria-label="Main">
       <a href="Mukul_Sharma_Resume.pdf">resume</a>
       <a href="https://github.com/elitecoder">github</a>
       <a href="mailto:mukuls2308@gmail.com">email</a>
     </nav>
   </header>
+</div>
 
-  <main>
-    <section class="opening">
-      <h1>I take software from its first commit to <em>version&nbsp;1.0</em>, and lately I build the AI that helps ship it.</h1>
-      <div class="sub">
-        <p>Senior Staff Engineer at Adobe, where I work on Adobe Firefly Video Editor and Firefly video Assembler. Before that: iOS apps, mobile SDKs, and a car gadget that talked to Alexa.</p>
-        <p class="mono">San Jose, California · shipping since 2010</p>
+<main>
+  <section class="wrap opening" aria-labelledby="map-title">
+    <p class="k">career map · 2010 to 2026</p>
+    <h1 id="map-title">I take software from its first commit to <em>version&nbsp;1.0</em>, and lately I use AI to help teams ship faster.</h1>
+    <p class="cap">Senior Staff Engineer at Adobe, in San Jose, California. Each node on the line is something I shipped; select one for its story.</p>
+  </section>
+
+  <figure class="wide mapfig" style="margin-top:1rem" aria-label="Career map, 2010 to 2026. Select a product or an employer for details."><div class="maparea"><svg class="ink map-h" viewBox="0 50 1440 780" aria-hidden="true"><path class="trunk" d="M40 380 H1345.6"/><path class="m d" d="M1345.6 380 H1380.0"/><rect class="inkf" x="35.0" y="375" width="10" height="10"/><rect class="inkf" x="97.7" y="375" width="10" height="10"/><rect class="inkf" x="348.6" y="375" width="10" height="10"/><rect class="inkf" x="474.1" y="375" width="10" height="10"/><rect class="inkf" x="536.8" y="375" width="10" height="10"/><rect class="inkf" x="725.0" y="375" width="10" height="10"/><g id="g-touchtest" class="prod"><path class="branch" d="M165.5 380 C165.5 340 190 350 190 308"/><g class="glyph" transform="translate(190.0 132) scale(2.1)">
+<rect class="f" x="-42" y="-28" width="30" height="56" rx="5"/><rect class="thin" x="-39" y="-22" width="24" height="40" rx="1"/>
+<path class="thin" d="M-30 -25 H-24"/><circle class="thin" cx="-27" cy="23" r="2"/>
+<circle class="inkf" cx="-27" cy="-3" r="2.2"/><circle class="thin" cx="-27" cy="-3" r="6"/><circle class="thin faint" cx="-27" cy="-3" r="9.5"/>
+<path class="d thin" d="M-10 -12 C-5 -21 5 -21 10 -12"/><path class="thin" d="M6 -15 l4 3 l1 -5"/>
+<rect class="f" x="12" y="-28" width="30" height="56" rx="5"/><rect class="thin" x="15" y="-24" width="24" height="42" rx="1"/>
+<path class="thin" d="M18 -15 l2 2 l4 -4 M27 -15 H36 M18 -6 l2 2 l4 -4 M27 -6 H34 M18 3 l2 2 l4 -4 M27 3 H36 M18 12 l2 2 l4 -4 M27 12 H32"/>
+<path class="thin" d="M20 23 l3 -2 v4 z"/><circle class="thin" cx="27" cy="23" r="1.6"/><rect class="thin" x="31" y="21.4" width="3.2" height="3.2"/></g><text class="nm" x="190.0" y="256" text-anchor="middle">TouchTest</text><text class="dt" x="190" y="280" text-anchor="middle">launch · Jan 2012</text><circle class="dot" cx="190" cy="300" r="7"/></g><g id="g-mpulse" class="prod"><path class="branch" d="M341.1 380 C341.1 420 330 410 330 452"/><circle class="dot" cx="330" cy="460" r="7"/><text class="nm" x="330.0" y="492" text-anchor="middle">mPulse Mobile</text><text class="dt" x="330" y="514" text-anchor="middle">v1 · 2015</text><g class="glyph" transform="translate(330.0 620) scale(2.1)">
+<rect class="f" x="-44" y="-28" width="28" height="56" rx="5"/><rect class="thin" x="-41" y="-22" width="22" height="40" rx="1"/>
+<path class="thin" d="M-33 -25 H-27"/>
+<rect class="thin" x="-38" y="-18" width="7" height="7" rx="1"/><rect class="thin" x="-29" y="-18" width="7" height="7" rx="1"/>
+<rect class="thin" x="-38" y="-8" width="7" height="7" rx="1"/><rect class="w thin" x="-29" y="-8" width="7" height="7" rx="1"/>
+<path class="thin" d="M-38 5 H-22 M-38 10 H-26"/>
+<path class="thin d" d="M-14 -14 H1 M-14 -2 H1 M-14 10 H1"/><path class="thin" d="M-2 -17 l3 3 l-3 3 M-2 -5 l3 3 l-3 3 M-2 7 l3 3 l-3 3"/>
+<rect class="f" x="6" y="-28" width="38" height="56" rx="3"/>
+<path d="M9 -16 h6 l3 -8 l4 15 l3 -10 l3 4 h13"/>
+<path class="thin d" d="M9 2 H41"/>
+<rect class="w thin" x="11" y="12" width="4" height="10"/><rect class="w thin" x="17" y="6" width="4" height="16"/><rect class="w thin" x="23" y="9" width="4" height="13"/>
+<rect class="w thin" x="29" y="4" width="4" height="18"/><rect class="w thin" x="35" y="11" width="4" height="11"/>
+<path class="thin" d="M9 22 H41"/></g></g><g id="g-muse" class="prod"><path class="branch" d="M532.4 380 C532.4 340 560 350 560 308"/><g class="glyph" transform="translate(560.0 132) scale(2.1)">
+<path d="M-46 16 C-22 4 22 4 46 16"/><path class="thin" d="M-40 24 C-20 15 20 15 40 24"/>
+<rect class="f" x="-26" y="4" width="36" height="18" rx="3"/><path class="thin" d="M-23 9 H7 M-23 13 H7 M-23 17 H7"/>
+<path d="M-12 -4 V4 M-4 -4 V4"/>
+<ellipse class="f" cx="-8" cy="-16" rx="15" ry="5.5"/>
+<path class="f" d="M-23 -16 V-8 A15 5.5 0 0 0 7 -8 V-16 A15 5.5 0 0 1 -23 -16 Z"/>
+<ellipse class="thin" cx="-8" cy="-16" rx="9.5" ry="3.2"/><circle class="inkf" cx="-8" cy="-16" r="1.3"/>
+<path class="thin" d="M12 -21 q6 5 0 11"/><path class="thin" d="M18 -26 q11 10 0 21"/><path class="thin" d="M24 -31 q16 15 0 31"/>
+</g><text class="nm" x="560.0" y="256" text-anchor="middle">Muse</text><text class="dt" x="560" y="280" text-anchor="middle">launch · Nov 2017</text><circle class="dot" cx="560" cy="300" r="7"/></g><g id="g-express" class="prod"><path class="branch" d="M1007.8 380 C1007.8 420 820 410 820 452"/><circle class="dot" cx="820" cy="460" r="7"/><text class="nm" x="820.0" y="492" text-anchor="middle">Adobe Express</text><text class="nm" x="820.0" y="516" text-anchor="middle">video</text><text class="dt" x="820" y="538" text-anchor="middle">launch · 2023</text><g class="glyph" transform="translate(820.0 620) scale(2.1)">
+<rect class="thin" x="-44" y="-31" width="5" height="5" rx="1"/><rect class="thin" x="-36.5" y="-31" width="5" height="5" rx="1"/>
+<rect class="thin" x="-29" y="-31" width="5" height="5" rx="1"/><rect class="thin" x="-21.5" y="-31" width="5" height="5" rx="1"/>
+<rect class="thin" x="-14" y="-31" width="5" height="5" rx="1"/><rect class="thin" x="-6.5" y="-31" width="5" height="5" rx="1"/>
+<rect class="thin" x="1" y="-31" width="5" height="5" rx="1"/><rect class="thin" x="8.5" y="-31" width="5" height="5" rx="1"/>
+<rect class="f" x="-44" y="-20" width="62" height="46" rx="5"/><rect class="thin" x="-40" y="-16" width="54" height="38" rx="1"/>
+<rect class="w thin" x="-36" y="-12" width="46" height="20" rx="1"/><path class="inkf" d="M-16 -7 l9 5 l-9 5 z"/>
+<rect class="thin" x="-36" y="12" width="14" height="5" rx="1"/><rect class="w thin" x="-20" y="12" width="17" height="5" rx="1"/><rect class="thin" x="-1" y="12" width="11" height="5" rx="1"/>
+<path d="M-10 10 V20"/>
+<rect class="f" x="24" y="-12" width="20" height="38" rx="4"/><path class="thin" d="M31 -9 H37"/>
+<rect class="w thin" x="27" y="-5" width="14" height="11" rx="1"/><path class="inkf" d="M32 -2.5 l4 2 l-4 2 z"/>
+<path class="thin" d="M27 11 H34 M35.5 11 H41 M27 15 H37"/><path class="thin" d="M33 8.5 V17.5"/></g></g><g id="g-fve" class="prod"><path class="branch" d="M1280.0 380 C1280.0 340 1080 350 1080 308"/><g class="glyph" transform="translate(1080.0 132) scale(2.1)">
+<rect class="f" x="-46" y="-31" width="92" height="62" rx="3"/><path class="thin" d="M-46 -25 H46"/>
+<circle class="inkf" cx="-42" cy="-28" r="1"/><circle class="inkf" cx="-38.5" cy="-28" r="1"/><circle class="inkf" cx="-35" cy="-28" r="1"/>
+<rect class="thin" x="-42" y="-21" width="8" height="6" rx="1"/><rect class="thin" x="-32" y="-21" width="8" height="6" rx="1"/>
+<rect class="thin" x="-42" y="-13" width="8" height="6" rx="1"/><rect class="w thin" x="-32" y="-13" width="8" height="6" rx="1"/>
+<rect class="w thin" x="-18" y="-22" width="36" height="20" rx="1"/><path class="inkf" d="M-3 -16 l7 4 l-7 4 z"/>
+<path class="thin" d="M24 -21 H42 M24 -16 H38 M24 -11 H41 M24 -6 H36"/>
+<path class="thin" d="M-42 2 H42 M-42 0 V2 M-34 1 V2 M-26 0 V2 M-18 1 V2 M-10 0 V2 M-2 1 V2 M6 0 V2 M14 1 V2 M22 0 V2 M30 1 V2 M38 0 V2"/>
+<rect class="f thin" x="-42" y="5" width="20" height="6" rx="1"/><rect class="w thin" x="-20" y="5" width="15" height="6" rx="1"/>
+<rect class="f thin" x="-3" y="5" width="23" height="6" rx="1"/><rect class="f thin" x="22" y="5" width="20" height="6" rx="1"/>
+<rect class="f thin" x="-34" y="13" width="26" height="6" rx="1"/><rect class="w thin" x="-6" y="13" width="30" height="6" rx="1"/><rect class="f thin" x="26" y="13" width="14" height="6" rx="1"/>
+<rect class="f thin" x="-42" y="21" width="84" height="7" rx="1"/>
+<path class="thin" d="M-40 24.5 l2 -2 l2 3 l2 -3.5 l2 4 l2 -3 l2 2.5 l2 -2 l2 2 l2 -2.5 l2 3 l2 -2 l2 1.5 l2 -2.5 l2 3 l2 -2 l2 2 l2 -2.5 l2 2.5 l2 -1.5 l2 2 l2 -2 l2 1.5 l2 -2.5 l2 3 l2 -2 l2 2 l2 -2.5 l2 2.5 l2 -1.5 l2 2 l2 -2 l2 1.5 l2 -2.5 l2 3 l2 -2 l2 2 l2 -2 l2 1"/>
+<path class="inkf" d="M4 -1 h6 l-3 4 z"/><path d="M7 2 V29"/></g><text class="nm" x="1080.0" y="232" text-anchor="middle">Adobe Firefly</text><text class="nm" x="1080.0" y="256" text-anchor="middle">Video Editor</text><text class="dt" x="1080" y="280" text-anchor="middle">beta · Dec 2025</text><circle class="dot" cx="1080" cy="300" r="7"/></g><g id="g-forge" class="prod"><path class="branch d" d="M1296.7 380 C1296.7 420 1050 410 1050 452"/><circle class="dot" cx="1050" cy="460" r="7"/><text class="nm" x="1050.0" y="492" text-anchor="middle">Forge</text><text class="dt" x="1050" y="514" text-anchor="middle">v1 · Feb 2026</text><g class="glyph" transform="translate(1050.0 620) scale(2.1)">
+<circle class="inkf" cx="-43" cy="0" r="2.5"/>
+<path d="M-40 0 H-37 C-32 0 -32 -14 -27 -14 H-12 C-7 -14 -7 0 -3 0"/>
+<path d="M-37 0 C-32 0 -32 14 -27 14 H-12 C-7 14 -7 0 -3 0"/>
+<circle class="f" cx="-25" cy="-14" r="3"/><circle class="f" cx="-14" cy="-14" r="3"/>
+<circle class="f" cx="-25" cy="14" r="3"/><circle class="f" cx="-14" cy="14" r="3"/>
+<path class="thin" d="M-27 -24 h4 M-25 -26 v4 M-16 -25 l4 4 M-12 -25 l-4 4"/>
+<path class="thin" d="M-27 22 h4 M-25 20 v4 M-16 20 l4 4 M-12 20 l-4 4"/>
+<circle class="f" cx="0" cy="0" r="3.5"/>
+<path d="M3.5 0 H6"/><rect class="w thin" x="6" y="-4" width="7" height="8" rx="1"/><path class="thin" d="M13 0 H15"/>
+<rect class="w thin" x="15" y="-4" width="7" height="8" rx="1"/><path class="thin" d="M22 0 H24"/><rect class="w thin" x="24" y="-4" width="7" height="8" rx="1"/>
+<path d="M31 0 H34"/><path class="f" d="M35 -8 H41 L45 -4 V8 H35 Z"/><path class="thin" d="M41 -8 V-4 H45 M37 -1 H43 M37 2 H43 M37 5 H41"/></g></g><g id="g-architect" class="prod"><path class="branch" d="M1315.6 380 C1315.6 420 1290 410 1290 452"/><circle class="dot" cx="1290" cy="460" r="7"/><text class="nm" x="1290.0" y="492" text-anchor="middle">Architect</text><text class="dt" x="1290" y="514" text-anchor="middle">v1 · Apr 2026</text><g class="glyph" transform="translate(1290.0 620) scale(2.1)">
+<path class="f" d="M-46 -12 H-36 L-32 -8 V12 H-46 Z"/><path class="thin" d="M-36 -12 V-8 H-32 M-43 -4 H-35 M-43 0 H-35 M-43 4 H-37"/>
+<path d="M-32 0 H-28"/>
+<rect class="f" x="-28" y="-5" width="10" height="10" rx="1.5"/><rect class="f" x="-14" y="-5" width="10" height="10" rx="1.5"/>
+<rect class="f" x="0" y="-5" width="10" height="10" rx="1.5"/><rect class="w" x="14" y="-5" width="10" height="10" rx="1.5"/>
+<path class="thin" d="M-18 0 H-14 M-4 0 H0 M10 0 H14"/>
+<path class="thin" d="M-26 0 l2 2 l4 -4 M-12 0 l2 2 l4 -4 M2 0 l2 2 l4 -4 M16 0 l2 2 l4 -4"/>
+<path class="thin d" d="M-23 9 C-23 20 5 20 5 9"/><path class="thin" d="M2 12 l3 -3 l3 3"/>
+<circle class="f" cx="19" cy="-19" r="3.5"/><path class="f" d="M12 -9 q7 -9 14 0 z"/><path class="thin" d="M19 -9 V-5"/>
+<path d="M24 0 H29"/>
+<circle class="f" cx="33" cy="-10" r="2.6"/><circle class="f" cx="33" cy="10" r="2.6"/><circle class="inkf" cx="43" cy="0" r="2.6"/>
+<path d="M33 -7.4 V7.4 M33 -7.4 C33 -2 40 -4 41 -1.5"/></g></g><g id="g-assembler" class="prod next"><path class="branch m" d="M1380.0 380 C1380.0 340 1318 350 1318 308"/><g class="glyph" transform="translate(1318.0 132) scale(2.1)">
+<rect class="f m" x="-46" y="-26" width="20" height="13" rx="1.5"/><path class="m thin" d="M-43 -26 v2 M-38 -26 v2 M-33 -26 v2 M-28 -26 v2 M-43 -13 v-2 M-38 -13 v-2 M-33 -13 v-2 M-28 -13 v-2"/>
+<rect class="f m" x="-46" y="-6.5" width="20" height="13" rx="1.5"/><path class="m thin" d="M-43 -6.5 v2 M-38 -6.5 v2 M-33 -6.5 v2 M-28 -6.5 v2 M-43 6.5 v-2 M-38 6.5 v-2 M-33 6.5 v-2 M-28 6.5 v-2"/>
+<rect class="f m" x="-46" y="13" width="20" height="13" rx="1.5"/><path class="m thin" d="M-43 13 v2 M-38 13 v2 M-33 13 v2 M-28 13 v2 M-43 26 v-2 M-38 26 v-2 M-33 26 v-2 M-28 26 v-2"/>
+<path class="m" d="M-24 -19.5 C-12 -19.5 -10 -3 0 -3 M-24 0 H0 M-24 19.5 C-12 19.5 -10 3 0 3"/><path class="m" d="M-3 -6 l3 6 l-3 6"/>
+<rect class="f m" x="3" y="-9" width="43" height="18" rx="1.5"/><path class="m thin" d="M17 -9 V9 M31 -9 V9"/>
+<path class="m thin" d="M6 -9 v2.5 M10 -9 v2.5 M14 -9 v2.5 M20 -9 v2.5 M24 -9 v2.5 M28 -9 v2.5 M34 -9 v2.5 M38 -9 v2.5 M42 -9 v2.5"/>
+<path class="m thin" d="M6 9 v-2.5 M10 9 v-2.5 M14 9 v-2.5 M20 9 v-2.5 M24 9 v-2.5 M28 9 v-2.5 M34 9 v-2.5 M38 9 v-2.5 M42 9 v-2.5"/></g><text class="nm" x="1318.0" y="232" text-anchor="middle">Firefly video</text><text class="nm" x="1318.0" y="256" text-anchor="middle">Assembler</text><text class="dt mt" x="1318" y="280" text-anchor="middle">beta · Nov 2026</text><circle class="dot mf" cx="1318" cy="300" r="7"/></g><text class="note" x="1195" y="402" text-anchor="end">open source</text><path class="thin" d="M40 730 H1380.0"/><path class="thin" d="M40.0 730 V736"/><text class="t" x="40.0" y="752" text-anchor="middle">2010</text><path class="thin" d="M102.7 730 V736"/><text class="t" x="102.7" y="752" text-anchor="middle">2011</text><path class="thin" d="M165.5 730 V736"/><text class="t" x="165.5" y="752" text-anchor="middle">2012</text><path class="thin" d="M228.2 730 V736"/><text class="t" x="228.2" y="752" text-anchor="middle">2013</text><path class="thin" d="M290.9 730 V736"/><text class="t" x="290.9" y="752" text-anchor="middle">2014</text><path class="thin" d="M353.6 730 V736"/><text class="t" x="353.6" y="752" text-anchor="middle">2015</text><path class="thin" d="M416.4 730 V736"/><text class="t" x="416.4" y="752" text-anchor="middle">2016</text><path class="thin" d="M479.1 730 V736"/><text class="t" x="479.1" y="752" text-anchor="middle">2017</text><path class="thin" d="M541.8 730 V736"/><text class="t" x="541.8" y="752" text-anchor="middle">2018</text><path class="thin" d="M604.5 730 V736"/><text class="t" x="604.5" y="752" text-anchor="middle">2019</text><path class="thin" d="M667.3 730 V736"/><text class="t" x="667.3" y="752" text-anchor="middle">2020</text><path class="thin" d="M730.0 730 V736"/><text class="t" x="730.0" y="752" text-anchor="middle">2021</text><path class="thin" d="M841.1 730 V736"/><text class="t" x="841.1" y="752" text-anchor="middle">2022</text><path class="thin" d="M952.2 730 V736"/><text class="t" x="952.2" y="752" text-anchor="middle">2023</text><path class="thin" d="M1063.3 730 V736"/><text class="t" x="1063.3" y="752" text-anchor="middle">2024</text><path class="thin" d="M1174.4 730 V736"/><text class="t" x="1174.4" y="752" text-anchor="middle">2025</text><path class="thin" d="M1285.6 730 V736"/><text class="t" x="1285.6" y="752" text-anchor="middle">2026</text><rect x="723.0" y="727" width="14" height="6" style="fill:var(--paper);stroke:none"/><path class="thin" d="M721.0 736 L727.0 724 M733.0 736 L739.0 724"/><text class="note" x="730.0" y="716" text-anchor="middle">scale changes</text><g id="g-sumtotal" class="emp"><path class="thin" d="M43.0 768 V776 H99.7 V768"/><text class="st" x="71.4" y="796" text-anchor="middle">SumTotal</text><text class="st" x="71.4" y="811" text-anchor="middle">Systems</text></g><g id="g-soasta" class="emp"><path class="thin" d="M105.7 768 V776 H350.6 V768"/><text class="st" x="228.2" y="796" text-anchor="middle">SOASTA</text></g><g id="g-8x8" class="emp"><path class="thin" d="M356.6 768 V776 H476.1 V768"/><text class="st" x="416.4" y="796" text-anchor="middle">8x8</text></g><g id="g-speak" class="emp"><path class="thin" d="M482.1 768 V776 H538.8 V768"/><text class="st" x="510.5" y="796" text-anchor="middle">Speak</text><text class="st" x="510.5" y="811" text-anchor="middle">Music</text></g><g id="g-mobileiron" class="emp"><path class="thin" d="M544.8 768 V776 H727.0 V768"/><text class="st" x="635.9" y="796" text-anchor="middle">MobileIron</text></g><g id="g-adobe" class="emp"><path class="thin" d="M733.0 768 V776 H1377.0 V768"/><text class="st" x="1055.0" y="796" text-anchor="middle">Adobe</text></g></svg><details class="pin hp dn al-l" id="h-touchtest" name="map" style="left:6.528%;top:1.538%;width:13.333%;height:32.051%"><summary><span class="sr">TouchTest, launch Jan 2012</span></summary><div class="pop"><h3>TouchTest</h3><p class="pm">SOASTA · launch Jan 2012</p><p class="pc">On the launch team for TouchTest, test automation for iOS and Android apps.</p><a class="cite" href="https://www.informationweek.com/it-leadership/cloud-platform-stress-tests-mobile-apps">InformationWeek on the launch</a></div></details><details class="pin hp upw al-c" id="h-mpulse" name="map" style="left:16.250%;top:51.026%;width:13.333%;height:31.026%"><summary><span class="sr">mPulse Mobile, v1 2015</span></summary><div class="pop"><h3>mPulse Mobile</h3><p class="pm">SOASTA · v1 2015</p><p class="pc">As its architect, designed the mobile SDK, its API, and the analytics for network requests inside customers&#x27; apps.</p></div></details><details class="pin hp dn al-c" id="h-muse" name="map" style="left:32.222%;top:1.538%;width:13.333%;height:32.051%"><summary><span class="sr">Muse, launch Nov 2017</span></summary><div class="pop"><h3>Muse</h3><p class="pm">Speak Music · launch Nov 2017</p><p class="pc">Led design, development, and launch of an Alexa device for the car, and owned its iOS app. 1,000+ Indiegogo backers, $70,000+.</p><a class="cite" href="https://techcrunch.com/2017/11/14/muse-is-a-simple-dedicated-amazon-alexa-add-on-for-the-car/">TechCrunch on the launch</a></div></details><details class="pin hp upw al-c" id="h-express" name="map" style="left:50.278%;top:51.026%;width:13.333%;height:31.026%"><summary><span class="sr">Adobe Express video, launch 2023</span></summary><div class="pop"><h3>Adobe Express video</h3><p class="pm">Adobe · launch 2023</p><p class="pc">Led the teams behind eight Video Quick Actions and the first video timeline in Express for iPhone and iPad.</p></div></details><details class="pin hp dn al-c" id="h-fve" name="map" style="left:68.333%;top:1.538%;width:13.333%;height:32.051%"><summary><span class="sr">Adobe Firefly Video Editor, beta Dec 2025</span></summary><div class="pop"><h3>Adobe Firefly Video Editor</h3><p class="pm">Adobe · beta Dec 2025</p><p class="pc">Built the timeline editing core from the first commit. The public beta reached 100K monthly users.</p><a class="cite" href="https://nofilmschool.com/adobe-firefly-video-editor-beta">No Film School on the public beta</a></div></details><details class="pin hp upw al-c" id="h-forge" name="map" style="left:66.250%;top:51.026%;width:13.333%;height:31.026%"><summary><span class="sr">Forge, v1 Feb 2026</span></summary><div class="pop"><h3>Forge</h3><p class="pm">open source · v1 Feb 2026</p><p class="pc">Adversarial planning for coding agents, then a pipeline that checks evidence at every stage.</p><a class="cite" href="https://github.com/elitecoder/forge">elitecoder/forge on GitHub</a></div></details><details class="pin hp upw al-r" id="h-architect" name="map" style="left:82.917%;top:51.026%;width:13.333%;height:31.026%"><summary><span class="sr">Architect, v1 Apr 2026</span></summary><div class="pop"><h3>Architect</h3><p class="pm">Adobe, internal · v1 Apr 2026</p><p class="pc">Turns a problem statement into a reviewed pull request with passing checks. 16+ engineers, about 2,000 runs.</p></div></details><details class="pin hp dn al-r" id="h-assembler" name="map" style="left:84.861%;top:1.538%;width:13.333%;height:32.051%"><summary><span class="sr">Firefly video Assembler, beta Nov 2026</span></summary><div class="pop"><h3>Firefly video Assembler</h3><p class="pm">Adobe · beta Nov 2026</p><p class="pc">Leading delivery of Adobe&#x27;s new video assembly product. Public beta ships this month.</p></div></details><details class="pin hp upw al-l" id="h-sumtotal" name="map" style="left:2.917%;top:91.026%;width:4.078%;height:7.692%"><summary><span class="sr">SumTotal Systems, 2010–2011</span></summary><div class="pop"><h3>SumTotal Systems</h3><p class="pm">2010–2011</p><p class="pc">Software Engineer</p></div></details><details class="pin hp upw al-l" id="h-soasta" name="map" style="left:7.273%;top:91.026%;width:17.146%;height:7.692%"><summary><span class="sr">SOASTA, 2011–2015</span></summary><div class="pop"><h3>SOASTA</h3><p class="pm">2011–2015</p><p class="pc">Sr. Software Engineer, then Tech Lead</p></div></details><details class="pin hp upw al-c" id="h-8x8" name="map" style="left:24.697%;top:91.026%;width:8.434%;height:7.692%"><summary><span class="sr">8x8, 2015–2017</span></summary><div class="pop"><h3>8x8</h3><p class="pm">2015–2017</p><p class="pc">Senior Mobile Engineer</p></div></details><details class="pin hp upw al-c" id="h-speak" name="map" style="left:33.409%;top:91.026%;width:4.078%;height:7.692%"><summary><span class="sr">Speak Music, 2017–2018</span></summary><div class="pop"><h3>Speak Music</h3><p class="pm">2017–2018</p><p class="pc">iOS Platform Lead.</p></div></details><details class="pin hp upw al-c" id="h-mobileiron" name="map" style="left:37.765%;top:91.026%;width:12.790%;height:7.692%"><summary><span class="sr">MobileIron, 2018–2021</span></summary><div class="pop"><h3>MobileIron</h3><p class="pm">2018–2021</p><p class="pc">Staff Software Engineer, iOS. Acquired by Ivanti.</p></div></details><details class="pin hp upw al-c" id="h-adobe" name="map" style="left:50.833%;top:91.026%;width:44.861%;height:7.692%"><summary><span class="sr">Adobe, 2021–now</span></summary><div class="pop"><h3>Adobe</h3><p class="pm">2021–now</p><p class="pc">Sr. Computer Scientist 2 (Sr. Staff Engineer)</p></div></details></div><ol class="vlist" aria-label="Career map, oldest first"><li class="v-start" aria-hidden="true"></li><li class="v-st"><details class="pin" name="vmap"><summary><span class="vn">SumTotal Systems</span> <span class="vy">2010–2011</span></summary><div class="vpop"><p class="pc">Software Engineer</p></div></details></li><li class="v-st"><details class="pin" name="vmap"><summary><span class="vn">SOASTA</span> <span class="vy">2011–2015</span></summary><div class="vpop"><p class="pc">Sr. Software Engineer, then Tech Lead</p></div></details></li><li class="v-pr"><details class="pin" name="vmap"><summary><svg class="ink vbr" viewBox="0 0 44 40" aria-hidden="true"><path class="branch" d="M12 0 C12 22 38 12 38 33"/></svg><span class="vdot" aria-hidden="true"></span><span class="vt"><span class="vname">TouchTest</span><span class="vmeta">launch · Jan 2012</span></span><svg class="ink vg" viewBox="-47 -33 94 66" aria-hidden="true"><g class="glyph" transform="translate(0.0 0) scale(1)">
+<rect class="f" x="-42" y="-28" width="30" height="56" rx="5"/><rect class="thin" x="-39" y="-22" width="24" height="40" rx="1"/>
+<path class="thin" d="M-30 -25 H-24"/><circle class="thin" cx="-27" cy="23" r="2"/>
+<circle class="inkf" cx="-27" cy="-3" r="2.2"/><circle class="thin" cx="-27" cy="-3" r="6"/><circle class="thin faint" cx="-27" cy="-3" r="9.5"/>
+<path class="d thin" d="M-10 -12 C-5 -21 5 -21 10 -12"/><path class="thin" d="M6 -15 l4 3 l1 -5"/>
+<rect class="f" x="12" y="-28" width="30" height="56" rx="5"/><rect class="thin" x="15" y="-24" width="24" height="42" rx="1"/>
+<path class="thin" d="M18 -15 l2 2 l4 -4 M27 -15 H36 M18 -6 l2 2 l4 -4 M27 -6 H34 M18 3 l2 2 l4 -4 M27 3 H36 M18 12 l2 2 l4 -4 M27 12 H32"/>
+<path class="thin" d="M20 23 l3 -2 v4 z"/><circle class="thin" cx="27" cy="23" r="1.6"/><rect class="thin" x="31" y="21.4" width="3.2" height="3.2"/></g></svg></summary><div class="vpop"><p class="pm">SOASTA · launch Jan 2012</p><p class="pc">On the launch team for TouchTest, test automation for iOS and Android apps.</p><a class="cite" href="https://www.informationweek.com/it-leadership/cloud-platform-stress-tests-mobile-apps">InformationWeek on the launch</a></div></details></li><li class="v-pr"><details class="pin" name="vmap"><summary><svg class="ink vbr" viewBox="0 0 44 40" aria-hidden="true"><path class="branch" d="M12 0 C12 22 38 12 38 33"/></svg><span class="vdot" aria-hidden="true"></span><span class="vt"><span class="vname">mPulse Mobile</span><span class="vmeta">v1 · 2015</span></span><svg class="ink vg" viewBox="-47 -33 94 66" aria-hidden="true"><g class="glyph" transform="translate(0.0 0) scale(1)">
+<rect class="f" x="-44" y="-28" width="28" height="56" rx="5"/><rect class="thin" x="-41" y="-22" width="22" height="40" rx="1"/>
+<path class="thin" d="M-33 -25 H-27"/>
+<rect class="thin" x="-38" y="-18" width="7" height="7" rx="1"/><rect class="thin" x="-29" y="-18" width="7" height="7" rx="1"/>
+<rect class="thin" x="-38" y="-8" width="7" height="7" rx="1"/><rect class="w thin" x="-29" y="-8" width="7" height="7" rx="1"/>
+<path class="thin" d="M-38 5 H-22 M-38 10 H-26"/>
+<path class="thin d" d="M-14 -14 H1 M-14 -2 H1 M-14 10 H1"/><path class="thin" d="M-2 -17 l3 3 l-3 3 M-2 -5 l3 3 l-3 3 M-2 7 l3 3 l-3 3"/>
+<rect class="f" x="6" y="-28" width="38" height="56" rx="3"/>
+<path d="M9 -16 h6 l3 -8 l4 15 l3 -10 l3 4 h13"/>
+<path class="thin d" d="M9 2 H41"/>
+<rect class="w thin" x="11" y="12" width="4" height="10"/><rect class="w thin" x="17" y="6" width="4" height="16"/><rect class="w thin" x="23" y="9" width="4" height="13"/>
+<rect class="w thin" x="29" y="4" width="4" height="18"/><rect class="w thin" x="35" y="11" width="4" height="11"/>
+<path class="thin" d="M9 22 H41"/></g></svg></summary><div class="vpop"><p class="pm">SOASTA · v1 2015</p><p class="pc">As its architect, designed the mobile SDK, its API, and the analytics for network requests inside customers&#x27; apps.</p></div></details></li><li class="v-st"><details class="pin" name="vmap"><summary><span class="vn">8x8</span> <span class="vy">2015–2017</span></summary><div class="vpop"><p class="pc">Senior Mobile Engineer</p></div></details></li><li class="v-st"><details class="pin" name="vmap"><summary><span class="vn">Speak Music</span> <span class="vy">2017–2018</span></summary><div class="vpop"><p class="pc">iOS Platform Lead.</p></div></details></li><li class="v-pr"><details class="pin" name="vmap"><summary><svg class="ink vbr" viewBox="0 0 44 40" aria-hidden="true"><path class="branch" d="M12 0 C12 22 38 12 38 33"/></svg><span class="vdot" aria-hidden="true"></span><span class="vt"><span class="vname">Muse</span><span class="vmeta">launch · Nov 2017</span></span><svg class="ink vg" viewBox="-47 -33 94 66" aria-hidden="true"><g class="glyph" transform="translate(0.0 0) scale(1)">
+<path d="M-46 16 C-22 4 22 4 46 16"/><path class="thin" d="M-40 24 C-20 15 20 15 40 24"/>
+<rect class="f" x="-26" y="4" width="36" height="18" rx="3"/><path class="thin" d="M-23 9 H7 M-23 13 H7 M-23 17 H7"/>
+<path d="M-12 -4 V4 M-4 -4 V4"/>
+<ellipse class="f" cx="-8" cy="-16" rx="15" ry="5.5"/>
+<path class="f" d="M-23 -16 V-8 A15 5.5 0 0 0 7 -8 V-16 A15 5.5 0 0 1 -23 -16 Z"/>
+<ellipse class="thin" cx="-8" cy="-16" rx="9.5" ry="3.2"/><circle class="inkf" cx="-8" cy="-16" r="1.3"/>
+<path class="thin" d="M12 -21 q6 5 0 11"/><path class="thin" d="M18 -26 q11 10 0 21"/><path class="thin" d="M24 -31 q16 15 0 31"/>
+</g></svg></summary><div class="vpop"><p class="pm">Speak Music · launch Nov 2017</p><p class="pc">Led design, development, and launch of an Alexa device for the car, and owned its iOS app. 1,000+ Indiegogo backers, $70,000+.</p><a class="cite" href="https://techcrunch.com/2017/11/14/muse-is-a-simple-dedicated-amazon-alexa-add-on-for-the-car/">TechCrunch on the launch</a></div></details></li><li class="v-st"><details class="pin" name="vmap"><summary><span class="vn">MobileIron</span> <span class="vy">2018–2021</span></summary><div class="vpop"><p class="pc">Staff Software Engineer, iOS. Acquired by Ivanti.</p></div></details></li><li class="v-st"><details class="pin" name="vmap"><summary><span class="vn">Adobe</span> <span class="vy">2021–now</span></summary><div class="vpop"><p class="pc">Sr. Computer Scientist 2 (Sr. Staff Engineer)</p></div></details></li><li class="v-pr"><details class="pin" name="vmap"><summary><svg class="ink vbr" viewBox="0 0 44 40" aria-hidden="true"><path class="branch" d="M12 0 C12 22 38 12 38 33"/></svg><span class="vdot" aria-hidden="true"></span><span class="vt"><span class="vname">Adobe Express video</span><span class="vmeta">launch · 2023</span></span><svg class="ink vg" viewBox="-47 -33 94 66" aria-hidden="true"><g class="glyph" transform="translate(0.0 0) scale(1)">
+<rect class="thin" x="-44" y="-31" width="5" height="5" rx="1"/><rect class="thin" x="-36.5" y="-31" width="5" height="5" rx="1"/>
+<rect class="thin" x="-29" y="-31" width="5" height="5" rx="1"/><rect class="thin" x="-21.5" y="-31" width="5" height="5" rx="1"/>
+<rect class="thin" x="-14" y="-31" width="5" height="5" rx="1"/><rect class="thin" x="-6.5" y="-31" width="5" height="5" rx="1"/>
+<rect class="thin" x="1" y="-31" width="5" height="5" rx="1"/><rect class="thin" x="8.5" y="-31" width="5" height="5" rx="1"/>
+<rect class="f" x="-44" y="-20" width="62" height="46" rx="5"/><rect class="thin" x="-40" y="-16" width="54" height="38" rx="1"/>
+<rect class="w thin" x="-36" y="-12" width="46" height="20" rx="1"/><path class="inkf" d="M-16 -7 l9 5 l-9 5 z"/>
+<rect class="thin" x="-36" y="12" width="14" height="5" rx="1"/><rect class="w thin" x="-20" y="12" width="17" height="5" rx="1"/><rect class="thin" x="-1" y="12" width="11" height="5" rx="1"/>
+<path d="M-10 10 V20"/>
+<rect class="f" x="24" y="-12" width="20" height="38" rx="4"/><path class="thin" d="M31 -9 H37"/>
+<rect class="w thin" x="27" y="-5" width="14" height="11" rx="1"/><path class="inkf" d="M32 -2.5 l4 2 l-4 2 z"/>
+<path class="thin" d="M27 11 H34 M35.5 11 H41 M27 15 H37"/><path class="thin" d="M33 8.5 V17.5"/></g></svg></summary><div class="vpop"><p class="pm">Adobe · launch 2023</p><p class="pc">Led the teams behind eight Video Quick Actions and the first video timeline in Express for iPhone and iPad.</p></div></details></li><li class="v-pr"><details class="pin" name="vmap"><summary><svg class="ink vbr" viewBox="0 0 44 40" aria-hidden="true"><path class="branch" d="M12 0 C12 22 38 12 38 33"/></svg><span class="vdot" aria-hidden="true"></span><span class="vt"><span class="vname">Adobe Firefly Video Editor</span><span class="vmeta">beta · Dec 2025</span></span><svg class="ink vg" viewBox="-47 -33 94 66" aria-hidden="true"><g class="glyph" transform="translate(0.0 0) scale(1)">
+<rect class="f" x="-46" y="-31" width="92" height="62" rx="3"/><path class="thin" d="M-46 -25 H46"/>
+<circle class="inkf" cx="-42" cy="-28" r="1"/><circle class="inkf" cx="-38.5" cy="-28" r="1"/><circle class="inkf" cx="-35" cy="-28" r="1"/>
+<rect class="thin" x="-42" y="-21" width="8" height="6" rx="1"/><rect class="thin" x="-32" y="-21" width="8" height="6" rx="1"/>
+<rect class="thin" x="-42" y="-13" width="8" height="6" rx="1"/><rect class="w thin" x="-32" y="-13" width="8" height="6" rx="1"/>
+<rect class="w thin" x="-18" y="-22" width="36" height="20" rx="1"/><path class="inkf" d="M-3 -16 l7 4 l-7 4 z"/>
+<path class="thin" d="M24 -21 H42 M24 -16 H38 M24 -11 H41 M24 -6 H36"/>
+<path class="thin" d="M-42 2 H42 M-42 0 V2 M-34 1 V2 M-26 0 V2 M-18 1 V2 M-10 0 V2 M-2 1 V2 M6 0 V2 M14 1 V2 M22 0 V2 M30 1 V2 M38 0 V2"/>
+<rect class="f thin" x="-42" y="5" width="20" height="6" rx="1"/><rect class="w thin" x="-20" y="5" width="15" height="6" rx="1"/>
+<rect class="f thin" x="-3" y="5" width="23" height="6" rx="1"/><rect class="f thin" x="22" y="5" width="20" height="6" rx="1"/>
+<rect class="f thin" x="-34" y="13" width="26" height="6" rx="1"/><rect class="w thin" x="-6" y="13" width="30" height="6" rx="1"/><rect class="f thin" x="26" y="13" width="14" height="6" rx="1"/>
+<rect class="f thin" x="-42" y="21" width="84" height="7" rx="1"/>
+<path class="thin" d="M-40 24.5 l2 -2 l2 3 l2 -3.5 l2 4 l2 -3 l2 2.5 l2 -2 l2 2 l2 -2.5 l2 3 l2 -2 l2 1.5 l2 -2.5 l2 3 l2 -2 l2 2 l2 -2.5 l2 2.5 l2 -1.5 l2 2 l2 -2 l2 1.5 l2 -2.5 l2 3 l2 -2 l2 2 l2 -2.5 l2 2.5 l2 -1.5 l2 2 l2 -2 l2 1.5 l2 -2.5 l2 3 l2 -2 l2 2 l2 -2 l2 1"/>
+<path class="inkf" d="M4 -1 h6 l-3 4 z"/><path d="M7 2 V29"/></g></svg></summary><div class="vpop"><p class="pm">Adobe · beta Dec 2025</p><p class="pc">Built the timeline editing core from the first commit. The public beta reached 100K monthly users.</p><a class="cite" href="https://nofilmschool.com/adobe-firefly-video-editor-beta">No Film School on the public beta</a></div></details></li><li class="v-pr v-os"><details class="pin" name="vmap"><summary><svg class="ink vbr" viewBox="0 0 44 40" aria-hidden="true"><path class="branch d" d="M12 0 C12 22 38 12 38 33"/></svg><span class="vdot" aria-hidden="true"></span><span class="vt"><span class="vname">Forge</span><span class="vmeta">v1 · Feb 2026</span></span><svg class="ink vg" viewBox="-47 -33 94 66" aria-hidden="true"><g class="glyph" transform="translate(0.0 0) scale(1)">
+<circle class="inkf" cx="-43" cy="0" r="2.5"/>
+<path d="M-40 0 H-37 C-32 0 -32 -14 -27 -14 H-12 C-7 -14 -7 0 -3 0"/>
+<path d="M-37 0 C-32 0 -32 14 -27 14 H-12 C-7 14 -7 0 -3 0"/>
+<circle class="f" cx="-25" cy="-14" r="3"/><circle class="f" cx="-14" cy="-14" r="3"/>
+<circle class="f" cx="-25" cy="14" r="3"/><circle class="f" cx="-14" cy="14" r="3"/>
+<path class="thin" d="M-27 -24 h4 M-25 -26 v4 M-16 -25 l4 4 M-12 -25 l-4 4"/>
+<path class="thin" d="M-27 22 h4 M-25 20 v4 M-16 20 l4 4 M-12 20 l-4 4"/>
+<circle class="f" cx="0" cy="0" r="3.5"/>
+<path d="M3.5 0 H6"/><rect class="w thin" x="6" y="-4" width="7" height="8" rx="1"/><path class="thin" d="M13 0 H15"/>
+<rect class="w thin" x="15" y="-4" width="7" height="8" rx="1"/><path class="thin" d="M22 0 H24"/><rect class="w thin" x="24" y="-4" width="7" height="8" rx="1"/>
+<path d="M31 0 H34"/><path class="f" d="M35 -8 H41 L45 -4 V8 H35 Z"/><path class="thin" d="M41 -8 V-4 H45 M37 -1 H43 M37 2 H43 M37 5 H41"/></g></svg></summary><div class="vpop"><p class="pm">open source · v1 Feb 2026</p><p class="pc">Adversarial planning for coding agents, then a pipeline that checks evidence at every stage.</p><a class="cite" href="https://github.com/elitecoder/forge">elitecoder/forge on GitHub</a></div></details></li><li class="v-pr"><details class="pin" name="vmap"><summary><svg class="ink vbr" viewBox="0 0 44 40" aria-hidden="true"><path class="branch" d="M12 0 C12 22 38 12 38 33"/></svg><span class="vdot" aria-hidden="true"></span><span class="vt"><span class="vname">Architect</span><span class="vmeta">v1 · Apr 2026</span></span><svg class="ink vg" viewBox="-47 -33 94 66" aria-hidden="true"><g class="glyph" transform="translate(0.0 0) scale(1)">
+<path class="f" d="M-46 -12 H-36 L-32 -8 V12 H-46 Z"/><path class="thin" d="M-36 -12 V-8 H-32 M-43 -4 H-35 M-43 0 H-35 M-43 4 H-37"/>
+<path d="M-32 0 H-28"/>
+<rect class="f" x="-28" y="-5" width="10" height="10" rx="1.5"/><rect class="f" x="-14" y="-5" width="10" height="10" rx="1.5"/>
+<rect class="f" x="0" y="-5" width="10" height="10" rx="1.5"/><rect class="w" x="14" y="-5" width="10" height="10" rx="1.5"/>
+<path class="thin" d="M-18 0 H-14 M-4 0 H0 M10 0 H14"/>
+<path class="thin" d="M-26 0 l2 2 l4 -4 M-12 0 l2 2 l4 -4 M2 0 l2 2 l4 -4 M16 0 l2 2 l4 -4"/>
+<path class="thin d" d="M-23 9 C-23 20 5 20 5 9"/><path class="thin" d="M2 12 l3 -3 l3 3"/>
+<circle class="f" cx="19" cy="-19" r="3.5"/><path class="f" d="M12 -9 q7 -9 14 0 z"/><path class="thin" d="M19 -9 V-5"/>
+<path d="M24 0 H29"/>
+<circle class="f" cx="33" cy="-10" r="2.6"/><circle class="f" cx="33" cy="10" r="2.6"/><circle class="inkf" cx="43" cy="0" r="2.6"/>
+<path d="M33 -7.4 V7.4 M33 -7.4 C33 -2 40 -4 41 -1.5"/></g></svg></summary><div class="vpop"><p class="pm">Adobe, internal · v1 Apr 2026</p><p class="pc">Turns a problem statement into a reviewed pull request with passing checks. 16+ engineers, about 2,000 runs.</p></div></details></li><li class="v-pr v-end"><details class="pin" name="vmap"><summary><span class="vdot" aria-hidden="true"></span><span class="vt"><span class="vname">Firefly video Assembler</span><span class="vmeta">beta · Nov 2026</span></span><svg class="ink vg" viewBox="-47 -33 94 66" aria-hidden="true"><g class="glyph" transform="translate(0.0 0) scale(1)">
+<rect class="f m" x="-46" y="-26" width="20" height="13" rx="1.5"/><path class="m thin" d="M-43 -26 v2 M-38 -26 v2 M-33 -26 v2 M-28 -26 v2 M-43 -13 v-2 M-38 -13 v-2 M-33 -13 v-2 M-28 -13 v-2"/>
+<rect class="f m" x="-46" y="-6.5" width="20" height="13" rx="1.5"/><path class="m thin" d="M-43 -6.5 v2 M-38 -6.5 v2 M-33 -6.5 v2 M-28 -6.5 v2 M-43 6.5 v-2 M-38 6.5 v-2 M-33 6.5 v-2 M-28 6.5 v-2"/>
+<rect class="f m" x="-46" y="13" width="20" height="13" rx="1.5"/><path class="m thin" d="M-43 13 v2 M-38 13 v2 M-33 13 v2 M-28 13 v2 M-43 26 v-2 M-38 26 v-2 M-33 26 v-2 M-28 26 v-2"/>
+<path class="m" d="M-24 -19.5 C-12 -19.5 -10 -3 0 -3 M-24 0 H0 M-24 19.5 C-12 19.5 -10 3 0 3"/><path class="m" d="M-3 -6 l3 6 l-3 6"/>
+<rect class="f m" x="3" y="-9" width="43" height="18" rx="1.5"/><path class="m thin" d="M17 -9 V9 M31 -9 V9"/>
+<path class="m thin" d="M6 -9 v2.5 M10 -9 v2.5 M14 -9 v2.5 M20 -9 v2.5 M24 -9 v2.5 M28 -9 v2.5 M34 -9 v2.5 M38 -9 v2.5 M42 -9 v2.5"/>
+<path class="m thin" d="M6 9 v-2.5 M10 9 v-2.5 M14 9 v-2.5 M20 9 v-2.5 M24 9 v-2.5 M28 9 v-2.5 M34 9 v-2.5 M38 9 v-2.5 M42 9 v-2.5"/></g></svg></summary><div class="vpop"><p class="pm">Adobe · beta Nov 2026</p><p class="pc">Leading delivery of Adobe&#x27;s new video assembly product. Public beta ships this month.</p></div></details></li></ol></figure>
+  <div class="wrap"><ul class="maplegend" aria-hidden="true"><li><svg class="ink" viewBox="0 0 28 14"><path class="trunk" d="M2 7 H26"/><rect class="inkf" x="9" y="2" width="10" height="10"/></svg>employer</li><li><svg class="ink" viewBox="0 0 28 14"><circle class="f" cx="14" cy="7" r="5"/></svg>product shipped</li><li><svg class="ink" viewBox="0 0 28 14"><path class="d" d="M2 7 H26"/></svg>open source</li><li><svg class="ink" viewBox="0 0 28 14"><circle class="mf" cx="14" cy="7" r="5"/></svg>shipping now</li></ul></div>
+
+  <section class="wrap part" aria-labelledby="h-ai">
+    <hr class="rule" style="margin-top:0">
+    <div class="ai">
+      <div>
+        <p class="k" style="margin-top:2.5rem">on building with ai</p>
+        <h2 class="h" id="h-ai">The model isn't the trick. The <em>scaffolding</em> is.</h2>
+        <p class="cap">I treat coding agents like new teammates: the same reviews, the same tests, and the same bar for shipping.</p>
+        <ul class="stats" style="margin-top:2.25rem">
+          <li><b>400+</b><span>pull requests in six weeks this spring, with production code written by my agent pipeline</span></li>
+          <li><b>787</b><span>pull requests merged into Adobe Firefly's platform since April</span></li>
+          <li><b>22</b><span>software and quality engineers on my team, where I'm the senior engineer</span></li>
+        </ul>
+        <p class="after">I wrote the rules that walk agents through Adobe's video and Firefly code the way a senior engineer would, taught engineers to use them, and helped teams like Lightroom and Firefly Boards start building this way.</p>
       </div>
-    </section>
+      <figure style="margin:2.5rem 0 0"><svg class="ink scaffold" viewBox="0 0 330 512" role="img" aria-label="How an agent change ships: a problem statement is planned adversarially, an agent writes the code and the tests, the test must fail before the fix and pass after it, then review, a person approves, and the pull request merges."><path d="M34 26 V96"/><path d="M34 96 C34 112 16 112 16 128 V150 C16 166 34 166 34 182"/><path d="M34 96 C34 112 52 112 52 128 V150 C52 166 34 166 34 182"/><path d="M34 182 V218"/><path d="M34 262 V300"/><path class="m" d="M34 300 V352"/><path d="M34 352 V478"/><circle class="inkf" cx="34" cy="26" r="5"/><text x="64" y="31">problem statement</text><circle class="f" cx="16" cy="139" r="5"/><circle class="f" cx="52" cy="139" r="5"/><text x="64" y="134">plan, adversarially</text><text class="t" x="64" y="154">competing plans, critics</text><rect class="w" x="12" y="218" width="44" height="44" rx="4"/><path class="thin" d="M22 232 l6 6 l-6 6 M35 246 H46"/><text x="64" y="236">agent writes code</text><text class="t" x="64" y="256">and the tests</text><path class="m" d="M14 300 H54 M14 352 H54"/><text class="mt" x="64" y="306">test fails before the fix</text><text class="mt" x="64" y="352">and passes after it</text><circle class="f" cx="34" cy="398" r="7"/><text x="64" y="403">review, same bar as people</text><circle class="f" cx="34" cy="430" r="4.5"/><path class="f" d="M25 448 q9 -14 18 0 z"/><text x="64" y="443">a person approves</text><text class="t" x="64" y="463">every change</text><circle class="inkf" cx="34" cy="486" r="8"/><text x="64" y="491">merged pull request</text></svg></figure>
+    </div>
+  </section>
 
-    <section class="part" aria-labelledby="h-releases">
-      <h2 id="h-releases">release history</h2>
-      <ol class="log" reversed>
-        <li class="next">
-          <div class="when mono"><b>beta</b>Nov 2026</div>
-          <div>
-            <h3>Firefly video Assembler <span>Adobe</span></h3>
-            <p>Leading delivery of Adobe's new video assembly product. Public beta ships this month.</p>
-          </div>
-        </li>
-        <li>
-          <div class="when mono"><b>v1</b>Apr 2026</div>
-          <div>
-            <h3>Architect <span>Adobe, internal</span></h3>
-            <p>An agent harness that turns a problem statement into a reviewed pull request with passing checks. It plans adversarially, writes the code and the tests, hardens the tests, and ships, with a person approving every change. 16+ engineers have run it about 2,000 times.</p>
-          </div>
-        </li>
-        <li>
-          <div class="when mono"><b>v1</b>Feb 2026</div>
-          <div>
-            <h3>Forge <span>open source</span></h3>
-            <p>Adversarial planning for coding agents. Two AI architects design competing plans, critics attack both, and a judge keeps the best of each. Then a step-by-step pipeline writes, builds, tests, and reviews the code, checking evidence at every stage. Built for Claude Code.</p>
-            <p class="cite mono"><a href="https://github.com/elitecoder/forge">elitecoder/forge on GitHub</a></p>
-          </div>
-        </li>
-        <li>
-          <div class="when mono"><b>beta</b>Dec 2025</div>
-          <div>
-            <h3>Adobe Firefly Video Editor <span>Adobe</span></h3>
-            <p>I built the timeline editing core from the first commit: multiple tracks, trim, move, copy and paste, keyboard shortcuts. It opened as a public beta in December 2025 and reached 100K monthly users.</p>
-            <p class="cite mono"><a href="https://nofilmschool.com/adobe-firefly-video-editor-beta">No Film School on the public beta</a></p>
-          </div>
-        </li>
-        <li>
-          <div class="when mono"><b>launch</b>2023</div>
-          <div>
-            <h3>Adobe Express video <span>Adobe</span></h3>
-            <p>Led the team that built eight Video Quick Actions for the Adobe Express launch, and the team that shipped the first video timeline in Express for iPhone and iPad.</p>
-          </div>
-        </li>
-        <li>
-          <div class="when mono"><b>launch</b>Nov 2017</div>
-          <div>
-            <h3>Muse <span>Speak Music</span></h3>
-            <p>Led the design, development, and launch of an Alexa device for the car, and owned its iOS app. Over 1,000 people backed it on Indiegogo, for more than $70,000.</p>
-            <p class="cite mono"><a href="https://techcrunch.com/2017/11/14/muse-is-a-simple-dedicated-amazon-alexa-add-on-for-the-car/">TechCrunch on the launch</a></p>
-          </div>
-        </li>
-        <li>
-          <div class="when mono"><b>v1</b>2015</div>
-          <div>
-            <h3>mPulse Mobile <span>SOASTA</span></h3>
-            <p>As its architect, designed and built the mobile SDK, its API, and the analytics for network requests inside customers' apps.</p>
-          </div>
-        </li>
-        <li>
-          <div class="when mono"><b>launch</b>Jan 2012</div>
-          <div>
-            <h3>TouchTest <span>SOASTA</span></h3>
-            <p>On the launch team for TouchTest, test automation for iOS and Android apps.</p>
-            <p class="cite mono"><a href="https://www.informationweek.com/it-leadership/cloud-platform-stress-tests-mobile-apps">InformationWeek on the launch</a></p>
-          </div>
-        </li>
-      </ol>
-    </section>
+  <section class="wrap part" aria-labelledby="h-oss">
+    <hr class="rule" style="margin-top:0">
+    <p class="k" style="margin-top:2.5rem">open source · github.com/elitecoder</p>
+    <h2 class="h" id="h-oss">Tools for working with coding <em>agents</em>.</h2>
+    <div class="tools"><figure class="tool"><figcaption class="tool-head"><a class="tn" href="https://github.com/elitecoder/forge">Forge</a><span class="lang">python</span></figcaption><svg class="ink" viewBox="-4 0 368 156" role="img" aria-label="Forge: a problem splits into two competing plans, critics attack both, a judge merges the best of each, and a pipeline turns the plan into a pull request.">
+<circle class="inkf" cx="12" cy="76" r="5"/><text class="t" x="12" y="104" text-anchor="middle">problem</text>
+<path d="M17 76 H34 C58 76 58 34 82 34 H176 C198 34 198 76 207 76"/>
+<path d="M34 76 C58 76 58 118 82 118 H176 C198 118 198 76 207 76"/>
+<circle class="f" cx="92" cy="34" r="6"/><circle class="f" cx="166" cy="34" r="6"/>
+<circle class="f" cx="92" cy="118" r="6"/><circle class="f" cx="166" cy="118" r="6"/>
+<text x="92" y="18" text-anchor="middle">plan a</text><text x="166" y="18" text-anchor="middle">critic</text>
+<text x="92" y="144" text-anchor="middle">plan b</text><text x="166" y="144" text-anchor="middle">critic</text>
+<circle class="f" cx="214" cy="76" r="7"/><text x="216" y="118" text-anchor="middle">judge</text>
+<path d="M221 76 H240"/>
+<rect class="w" x="240" y="58" width="82" height="36" rx="4"/><text x="281" y="81" text-anchor="middle">pipeline</text>
+<path class="m" d="M322 76 H344"/><path class="m" d="M338 70 l6 6 l-6 6"/><circle class="mf" cx="352" cy="76" r="5"/>
+<text class="t mt" x="352" y="104" text-anchor="middle">pr</text></svg><p class="cap1">Competing AI architects, adversarial critics, and a judge plan the work; a step-by-step pipeline ships it.</p></figure><figure class="tool"><figcaption class="tool-head"><a class="tn" href="https://github.com/elitecoder/proofgate">ProofGate</a><span class="lang">python</span></figcaption><svg class="ink" viewBox="-4 0 368 156" role="img" aria-label="ProofGate: an agent reports done, a gate asks for proof, work with proof passes and work without proof goes back.">
+<rect class="f" x="4" y="50" width="78" height="40" rx="4"/><text x="43" y="75" text-anchor="middle">agent</text>
+<path class="thin" d="M14 10 H86 a5 5 0 0 1 5 5 v14 a5 5 0 0 1 -5 5 H40 l-8 10 l0 -10 H14 a5 5 0 0 1 -5 -5 v-14 a5 5 0 0 1 5 -5 z"/>
+<text class="si" x="50" y="28" text-anchor="middle">“done.”</text>
+<path d="M82 70 H180"/><path d="M172 64 l8 6 l-8 6"/>
+<path class="m" d="M196 34 V106 M188 34 H204 M188 106 H204" style="stroke-width:3"/>
+<text class="mt" x="196" y="22" text-anchor="middle">receipts?</text>
+<path d="M210 70 H294"/><path d="M286 64 l8 6 l-8 6"/>
+<circle class="f" cx="314" cy="70" r="13"/><path d="M307 70 l5 5 l9 -10"/>
+<text class="t" x="314" y="104" text-anchor="middle">verified</text>
+<path class="d" d="M196 112 V126 H43 V98"/><path d="M37 104 l6 -6 l6 6"/>
+<text class="t" x="120" y="148" text-anchor="middle">no proof: back to work</text></svg><p class="cap1">Agents say “done.” ProofGate asks for receipts. Tuned on 94,000 real commands.</p></figure><figure class="tool"><figcaption class="tool-head"><a class="tn" href="https://github.com/elitecoder/assistant">Assistant</a><span class="lang">python</span></figcaption><svg class="ink" viewBox="-4 0 368 156" role="img" aria-label="Assistant: inbox, Slack, GitHub, and calendar feed one node that writes a morning brief of decisions.">
+<text x="64" y="24" text-anchor="end">inbox</text><text x="64" y="60" text-anchor="end">slack</text>
+<text x="64" y="96" text-anchor="end">github</text><text x="64" y="132" text-anchor="end">calendar</text>
+<path d="M72 20 C130 20 120 76 168 76"/><path d="M72 56 C120 56 130 76 168 76"/>
+<path d="M72 92 C120 92 130 76 168 76"/><path d="M72 128 C130 128 120 76 168 76"/>
+<circle class="f" cx="176" cy="76" r="8"/>
+<path d="M184 76 H232"/><path d="M226 70 l6 6 l-6 6"/>
+<path class="f" d="M244 26 H294 L310 42 V126 H244 Z"/><path class="thin" d="M294 26 V42 H310"/>
+<rect class="mf" x="254" y="56" width="8" height="8"/><path class="thin" d="M268 60 H300"/>
+<rect x="254" y="76" width="8" height="8"/><path class="thin" d="M268 80 H296"/>
+<rect x="254" y="96" width="8" height="8"/><path class="thin" d="M268 100 H300"/>
+<text class="t" x="277" y="148" text-anchor="middle">morning brief</text></svg><p class="cap1">A chief of staff for a fleet of coding agents: inbox, Slack, GitHub, and calendar in one morning brief.</p></figure><figure class="tool"><figcaption class="tool-head"><a class="tn" href="https://github.com/elitecoder/perch">Perch</a><span class="lang">typescript</span></figcaption><svg class="ink" viewBox="-4 0 368 156" role="img" aria-label="Perch: a Claude Code session on your computer talks through Slack to your phone or laptop, in both directions.">
+<rect class="f" x="4" y="40" width="96" height="66" rx="4"/><path class="thin" d="M4 54 H100"/>
+<circle class="inkf" cx="13" cy="47" r="1.6"/><circle class="inkf" cx="20" cy="47" r="1.6"/>
+<path d="M16 70 l7 6 l-7 6 M30 84 H44"/>
+<text class="t" x="52" y="130" text-anchor="middle">claude code</text>
+<path d="M100 66 H156"/><path d="M150 60 l6 6 l-6 6"/><path d="M100 82 H156"/><path d="M106 76 l-6 6 l6 6"/>
+<circle class="f" cx="180" cy="74" r="22"/>
+<path class="m" d="M173 62 l-3 24 M187 62 l-3 24 M166 69 H193 M164 80 H191"/>
+<text class="t" x="180" y="130" text-anchor="middle">slack</text>
+<path d="M204 66 H252"/><path d="M246 60 l6 6 l-6 6"/><path d="M204 82 H252"/><path d="M210 76 l-6 6 l6 6"/>
+<rect class="f" x="262" y="40" width="26" height="46" rx="4"/><path class="thin" d="M270 46 H280"/>
+<rect class="f" x="298" y="52" width="52" height="34" rx="3"/><path d="M292 92 H356"/>
+<text class="t" x="310" y="130" text-anchor="middle">any device</text></svg><p class="cap1">Your Claude Code sessions, reachable from Slack on any device.</p></figure><figure class="tool"><figcaption class="tool-head"><a class="tn" href="https://github.com/elitecoder/debug-mode">debug-mode</a><span class="lang">javascript</span></figcaption><svg class="ink" viewBox="-4 0 368 156" role="img" aria-label="debug-mode: a loop of hypothesis, instrument, and observe, applied to servers, browsers, iOS, and Android.">
+<circle cx="100" cy="80" r="44"/><path d="M139.4 50.3 L138.1 58.0 L130.8 55.3"/><path d="M106.0 129.0 L100.0 124.0 L106.0 119.0"/><path d="M54.6 60.7 L61.9 58.0 L63.2 65.7"/><circle class="mf" cx="100" cy="36.0" r="6"/><text class="mt" x="100" y="20" text-anchor="middle">hypothesis</text><circle class="f" cx="138.1" cy="102.0" r="6"/><text x="142.1" y="146" text-anchor="middle" dx="10">instrument</text><circle class="f" cx="61.9" cy="102.0" r="6"/><text x="57.9" y="146" text-anchor="middle" dx="-8">observe</text>
+<path class="thin d" d="M164 80 H226"/>
+<text x="244" y="34">server</text><text x="244" y="66">browser</text><text x="244" y="98">ios</text><text x="244" y="130">android</text>
+<path class="thin" d="M226 80 C234 80 232 30 240 30 M226 80 C234 80 232 62 240 62 M226 80 C234 80 232 94 240 94 M226 80 C234 80 232 126 240 126"/></svg><p class="cap1">Hypothesis-driven debugging for coding agents, from servers and browsers to native iOS and Android.</p></figure><figure class="tool"><figcaption class="tool-head"><a class="tn" href="https://github.com/elitecoder/cmux-session-restore">cmux-session-restore</a><span class="lang">python</span></figcaption><svg class="ink" viewBox="-4 0 368 156" role="img" aria-label="cmux-session-restore: three Claude Code sessions survive a restart and come back as they were.">
+<rect class="f" x="4" y="24" width="88" height="26" rx="3"/><rect class="f" x="4" y="62" width="88" height="26" rx="3"/><rect class="f" x="4" y="100" width="88" height="26" rx="3"/>
+<path class="thin" d="M12 37 l5 4 l-5 4 M12 75 l5 4 l-5 4 M12 113 l5 4 l-5 4 M24 45 H54 M24 83 H66 M24 121 H48"/>
+<path d="M100 76 H140"/>
+<path class="m" d="M150 40 l14 18 l-14 18 l14 18 l-14 18" style="stroke-width:2.5"/>
+<text class="mt" x="157" y="144" text-anchor="middle">restart</text>
+<path d="M174 76 H222"/><path d="M216 70 l6 6 l-6 6"/>
+<rect class="f" x="232" y="24" width="88" height="26" rx="3"/><rect class="f" x="232" y="62" width="88" height="26" rx="3"/><rect class="f" x="232" y="100" width="88" height="26" rx="3"/>
+<path class="thin" d="M240 37 l5 4 l-5 4 M240 75 l5 4 l-5 4 M240 113 l5 4 l-5 4 M252 45 H282 M252 83 H294 M252 121 H276"/>
+<path d="M330 34 l4 4 l7 -8 M330 72 l4 4 l7 -8 M330 110 l4 4 l7 -8"/>
+<text class="t" x="48" y="144" text-anchor="middle">before</text><text class="t" x="276" y="144" text-anchor="middle">after</text></svg><p class="cap1">Brings Claude Code sessions back after a restart or reboot.</p></figure></div>
+  </section>
 
-    <section class="part" aria-labelledby="h-ai">
-      <h2 id="h-ai">on building with ai</h2>
-      <div class="prose">
-        <p>I treat coding agents like new teammates: they get the same reviews, the same tests, and the same bar for shipping as everyone else.</p>
-        <p>In six weeks this spring, my agent pipeline wrote the production code for more than 400 pull requests that I merged into Adobe Firefly's platform. I've merged 787 since April. The model isn't the trick. The scaffolding is: tests that must fail before a fix and pass after it, so a prompt change can't quietly make things worse, and rules that walk agents through the codebase the way a senior engineer would.</p>
-        <p>I wrote those rules for Adobe's video and Firefly code, taught engineers to use them, and helped teams like Lightroom and Firefly Boards start building this way. On my own team, I'm the senior engineer for 22 software and quality engineers.</p>
-      </div>
-    </section>
+  <section class="wrap part" aria-labelledby="h-papers">
+    <hr class="rule" style="margin-top:0">
+    <p class="k" style="margin-top:2.5rem">patents &amp; papers</p>
+    <h2 class="h" id="h-papers">Patents, a paper, and a <em>degree</em>.</h2>
+    <ul class="papers">
+      <li>Load test charts with standard deviation and percentile statistics<span class="meta">US Patent 9,251,035 · 2016</span></li>
+      <li>Cloud-based custom metric/timer definitions and real-time analytics of mobile apps<span class="meta">US 2015/0067527 · 2015</span></li>
+      <li>SHIELD: Social Sensing and Help in Emergency using Mobile Devices<span class="meta">IEEE Globecom · 2010 · with G. S. Thakur and A. Helmy</span></li>
+      <li>M.S. in Computer Science, University of Florida<span class="meta">2010</span></li>
+    </ul>
+  </section>
+</main>
 
-    <section class="part" aria-labelledby="h-oss">
-      <h2 id="h-oss">open source</h2>
-      <ul class="index">
-        <li><a class="t" href="https://github.com/elitecoder/forge">Forge</a><span class="d">Think deeply, then execute reliably. Competing AI architects, adversarial critics, and a judge plan the work; a step-by-step pipeline ships it.</span><span class="mono">python</span></li>
-        <li><a class="t" href="https://github.com/elitecoder/proofgate">ProofGate</a><span class="d">Agents say "done." ProofGate asks for receipts. Reliability checks for Claude Code, tuned on 94,000 real commands.</span><span class="mono">python</span></li>
-        <li><a class="t" href="https://github.com/elitecoder/assistant">Assistant</a><span class="d">A chief of staff for a fleet of coding agents. Your inbox, Slack, GitHub, and calendar, turned into one morning brief of decisions.</span><span class="mono">python</span></li>
-        <li><a class="t" href="https://github.com/elitecoder/perch">Perch</a><span class="d">Your Claude Code sessions, reachable from Slack on any device.</span><span class="mono">typescript</span></li>
-        <li><a class="t" href="https://github.com/elitecoder/debug-mode">debug-mode</a><span class="d">Hypothesis-driven debugging for coding agents, from servers and browsers to native iOS and Android.</span><span class="mono">javascript</span></li>
-        <li><a class="t" href="https://github.com/elitecoder/cmux-session-restore">cmux-session-restore</a><span class="d">Brings Claude Code sessions back after a restart or reboot.</span><span class="mono">python</span></li>
-      </ul>
-    </section>
-
-    <section class="part" aria-labelledby="h-work">
-      <h2 id="h-work">where i've worked</h2>
-      <ul class="index">
-        <li><span class="t">Adobe</span><span class="d">Sr. Computer Scientist 2 (Sr. Staff Engineer)</span><span class="mono">2021–now</span></li>
-        <li><span class="t">MobileIron</span><span class="d">Staff Software Engineer, iOS. Acquired by Ivanti.</span><span class="mono">2018–2021</span></li>
-        <li><span class="t">Speak Music</span><span class="d">iOS Platform Lead</span><span class="mono">2017–2018</span></li>
-        <li><span class="t">8x8</span><span class="d">Senior Mobile Engineer</span><span class="mono">2015–2017</span></li>
-        <li><span class="t">SOASTA</span><span class="d">Sr. Software Engineer, then Tech Lead</span><span class="mono">2011–2015</span></li>
-        <li><span class="t">SumTotal Systems</span><span class="d">Software Engineer</span><span class="mono">2010–2011</span></li>
-      </ul>
-    </section>
-
-    <section class="part" aria-labelledby="h-papers">
-      <h2 id="h-papers">patents &amp; papers</h2>
-      <ul class="papers">
-        <li>Load test charts with standard deviation and percentile statistics<span class="mono">US Patent 9,251,035 · 2016</span></li>
-        <li>Cloud-based custom metric/timer definitions and real-time analytics of mobile apps<span class="mono">US 2015/0067527 · 2015</span></li>
-        <li>SHIELD: Social Sensing and Help in Emergency using Mobile Devices<span class="mono">IEEE Globecom · 2010 · with G. S. Thakur and A. Helmy</span></li>
-        <li>M.S. in Computer Science, University of Florida<span class="mono">2010</span></li>
-      </ul>
-    </section>
-  </main>
-
-  <footer class="closing">
-    <p class="big">Building a 1.0? I'd like to hear about it.</p>
-    <div class="row mono">
+<footer class="wrap">
+  <div class="closing">
+    <p class="big">Building a <em>1.0</em>? I'd like to hear about it.</p>
+    <div class="row">
       <nav aria-label="Contact">
         <a href="mailto:mukuls2308@gmail.com">mukuls2308@gmail.com</a>
         <a href="https://github.com/elitecoder">github.com/elitecoder</a>
@@ -270,7 +520,48 @@ a:hover { color: var(--mark); }
       </nav>
       <span>© 2026 Mukul Sharma</span>
     </div>
-  </footer>
-</div>
+  </div>
+</footer>
+<script>
+(() => {
+  const pins = [...document.querySelectorAll('details.pin')];
+  const spots = [...document.querySelectorAll('details.hp')];
+  const overlap = (a, b) => Math.max(0, Math.min(a.r, b.right) - Math.max(a.l, b.left)) * Math.max(0, Math.min(a.b, b.bottom) - Math.max(a.t, b.top));
+  const place = d => {
+    const pop = d.querySelector('.pop');
+    if (!pop || !d.open) return;
+    Object.assign(pop.style, { left: '0px', top: '0px', right: 'auto', bottom: 'auto', transform: 'none' });
+    const h = d.getBoundingClientRect(), w = pop.offsetWidth, ht = pop.offsetHeight, g = 8;
+    const others = spots.filter(o => o !== d).map(o => o.getBoundingClientRect());
+    const xs = [h.left, h.left + (h.width - w) / 2, h.right - w], ys = [h.top, h.top + (h.height - ht) / 2, h.bottom - ht];
+    const cands = [
+      ...xs.map(x => [x, h.bottom + g]), ...xs.map(x => [x, h.top - ht - g]),
+      ...ys.map(y => [h.right + g, y]), ...ys.map(y => [h.left - w - g, y]),
+    ];
+    let best, bestScore = Infinity;
+    cands.forEach(([x, y]) => {
+      const r = { l: x, t: y, r: x + w, b: y + ht };
+      const off = Math.max(0, 16 - r.l) + Math.max(0, r.r - (innerWidth - 16));
+      const score = others.reduce((s, o) => s + overlap(r, o), 0) + off * 1e5;
+      if (score < bestScore) { bestScore = score; best = [x, y]; }
+    });
+    pop.style.left = `${best[0] - h.left}px`;
+    pop.style.top = `${best[1] - h.top}px`;
+  };
+  pins.forEach(d => d.addEventListener('toggle', () => {
+    if (d.open) pins.forEach(o => { if (o !== d && o.open) o.open = false; });
+    place(d);
+  }));
+  addEventListener('resize', () => spots.forEach(place));
+  document.addEventListener('keydown', e => {
+    if (e.key !== 'Escape') return;
+    const d = pins.find(x => x.open);
+    if (d) { d.open = false; d.querySelector('summary').focus(); }
+  });
+  document.addEventListener('click', e => {
+    pins.forEach(d => { if (d.open && !d.contains(e.target)) d.open = false; });
+  });
+})();
+</script>
 </body>
 </html>
