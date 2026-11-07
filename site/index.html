@@ -4,303 +4,264 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mukul Sharma</title>
-<meta name="description" content="Mukul Sharma, Senior Staff Engineer at Adobe. Fifteen years taking products from first commit to first release, and building the AI systems that ship them.">
+<meta name="description" content="Mukul Sharma takes software from its first commit to version 1.0, and builds the AI systems that help ship it. Senior Staff Engineer at Adobe.">
 <meta property="og:title" content="Mukul Sharma">
-<meta property="og:description" content="Senior Staff Engineer at Adobe. I ship 1.0 products, and I build the AI systems that ship them.">
+<meta property="og:description" content="I take software from its first commit to version 1.0, and lately I build the AI that helps ship it.">
 <meta property="og:url" content="https://mukul.app/">
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://mukul.app/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta name="color-scheme" content="light dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg: #fbfbf9;
-  --surface: #ffffff;
-  --ink: #16202c;
-  --muted: #56606b;
-  --faint: #6b737c;
-  --line: #e3e5e8;
-  --accent: #1f5fd6;
-  --accent-ink: #ffffff;
-  --navy: #1f3a5f;
-  --chip: #eef3fc;
-  --max: 46rem;
+  --paper: #f4f0e8;
+  --ink: #1c1a17;
+  --soft: #5d574e;
+  --hair: #d9d2c5;
+  --mark: #c2410c;
+  --serif: "Newsreader", Georgia, "Times New Roman", serif;
+  --display: "Instrument Serif", "Newsreader", Georgia, serif;
+  --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #0f141b;
-    --surface: #151c25;
-    --ink: #e7ebf0;
-    --muted: #a3adb8;
-    --faint: #8b95a1;
-    --line: #26303c;
-    --accent: #6ea2ff;
-    --accent-ink: #0b1220;
-    --navy: #c9d8ee;
-    --chip: #1a2535;
+    --paper: #15140f;
+    --ink: #ebe5d8;
+    --soft: #a59d8f;
+    --hair: #34302a;
+    --mark: #f0874f;
   }
 }
 * { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+html { -webkit-text-size-adjust: 100%; }
 body {
   margin: 0;
-  background: var(--bg);
+  background: var(--paper);
   color: var(--ink);
-  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, Roboto, "Helvetica Neue", Arial, sans-serif;
+  font: 400 1.1875rem/1.55 var(--serif);
+  font-optical-sizing: auto;
+  text-rendering: optimizeLegibility;
 }
-a { color: var(--accent); text-underline-offset: 0.18em; }
-a:hover { text-decoration-thickness: 2px; }
-:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
-.wrap { max-width: var(--max); margin: 0 auto; padding: 0 1.25rem; }
+::selection { background: var(--mark); color: var(--paper); }
+a { color: inherit; text-decoration: underline; text-decoration-color: var(--mark); text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
+a:hover { color: var(--mark); }
+:focus-visible { outline: 2px solid var(--mark); outline-offset: 3px; }
 
-.skip { position: absolute; left: -999px; }
-.skip:focus { left: 1rem; top: 1rem; background: var(--surface); padding: 0.5rem 0.75rem; z-index: 2; }
+.page { max-width: 64rem; margin: 0 auto; padding: 0 1.5rem; }
+.mono { font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.01em; }
 
-header.top { border-bottom: 1px solid var(--line); }
-header.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 3.5rem; }
-.brand { font-weight: 700; color: var(--ink); text-decoration: none; letter-spacing: -0.01em; }
-nav ul { display: flex; gap: 1.1rem; list-style: none; margin: 0; padding: 0; font-size: 0.93rem; }
-nav a { color: var(--muted); text-decoration: none; }
-nav a:hover { color: var(--ink); }
+.masthead { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; padding: 1.75rem 0; }
+.masthead .name { font-family: var(--display); font-size: 1.5rem; text-decoration: none; }
+.masthead nav { display: flex; gap: 1.4rem; }
+.masthead nav a { text-decoration: none; color: var(--soft); }
+.masthead nav a:hover { color: var(--mark); }
 
-.hero { padding: 4.5rem 0 3rem; }
-.hero h1 { font-size: clamp(2.4rem, 7vw, 3.4rem); line-height: 1.05; letter-spacing: -0.03em; margin: 0 0 0.6rem; color: var(--navy); }
-.role { margin: 0 0 1.25rem; font-weight: 600; color: var(--accent); }
-.lede { font-size: 1.22rem; line-height: 1.5; margin: 0 0 1.75rem; max-width: 38rem; }
-.actions { display: flex; flex-wrap: wrap; gap: 0.7rem; }
-.btn { display: inline-flex; align-items: center; min-height: 2.75rem; padding: 0 1.1rem; border-radius: 999px; font-weight: 600; font-size: 0.95rem; text-decoration: none; border: 1.5px solid var(--accent); }
-.btn.primary { background: var(--accent); color: var(--accent-ink); }
-.btn.ghost { color: var(--accent); }
-
-.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; margin: 0 0 1rem; }
-.stat { background: var(--surface); padding: 1rem 1.1rem; }
-.stat b { display: block; font-size: 1.6rem; letter-spacing: -0.02em; color: var(--navy); }
-.stat span { color: var(--muted); font-size: 0.9rem; line-height: 1.4; display: block; }
-
-section { padding: 2.75rem 0 0.5rem; }
-h2 { font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--faint); margin: 0 0 1.25rem; }
-.intro { margin: -0.25rem 0 1.5rem; color: var(--muted); }
-
-.timeline { list-style: none; margin: 0; padding: 0; }
-.timeline li { display: grid; grid-template-columns: 5.5rem 1fr; gap: 1rem; padding: 1.1rem 0; border-top: 1px solid var(--line); }
-.timeline li:first-child { border-top: 0; padding-top: 0; }
-.year { color: var(--faint); font-variant-numeric: tabular-nums; font-size: 0.95rem; padding-top: 0.1rem; }
-.timeline h3, .card h3 { margin: 0 0 0.2rem; font-size: 1.08rem; letter-spacing: -0.01em; }
-.where { color: var(--muted); font-weight: 400; }
-.timeline p { margin: 0; }
-.source { font-size: 0.88rem; margin-top: 0.35rem !important; }
-.tag { display: inline-block; font-size: 0.75rem; font-weight: 600; padding: 0.1rem 0.5rem; border-radius: 999px; background: var(--chip); color: var(--accent); margin-left: 0.4rem; vertical-align: 0.1em; }
-
-.points { margin: 0; padding-left: 1.2rem; }
-.points li { margin: 0 0 0.6rem; }
-
-.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 0.9rem; }
-.card { display: block; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 1.1rem 1.2rem; color: var(--ink); text-decoration: none; transition: border-color 0.15s, transform 0.15s; }
-.card:hover { border-color: var(--accent); transform: translateY(-2px); }
-.card p { margin: 0 0 0.6rem; color: var(--muted); font-size: 0.95rem; line-height: 1.5; }
-.card small { color: var(--faint); }
-
-.jobs { list-style: none; margin: 0; padding: 0; }
-.jobs li { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0 1rem; padding: 0.7rem 0; border-top: 1px solid var(--line); }
-.jobs li:first-child { border-top: 0; }
-.jobs .when { color: var(--faint); font-size: 0.93rem; font-variant-numeric: tabular-nums; }
-
-.plain { list-style: none; margin: 0; padding: 0; }
-.plain li { margin: 0 0 0.8rem; }
-.plain span { display: block; color: var(--muted); font-size: 0.93rem; }
-
-footer { margin-top: 3.5rem; padding: 2rem 0 3rem; border-top: 1px solid var(--line); color: var(--faint); font-size: 0.9rem; }
-footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem 1.5rem; }
-
-@media (max-width: 34rem) {
-  body { font-size: 16px; }
-  nav ul { gap: 0.85rem; font-size: 0.88rem; }
-  nav .optional { display: none; }
-  .hero { padding: 3rem 0 2rem; }
-  .timeline li { grid-template-columns: 1fr; gap: 0.15rem; }
-  .jobs li { flex-direction: column; }
+.opening { padding: 7vh 0 10vh; }
+.opening h1 {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(2.6rem, 6.4vw, 5.1rem);
+  line-height: 1.02;
+  letter-spacing: -0.015em;
+  margin: 0;
+  max-width: 15ch;
 }
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  .card { transition: none; }
-  .card:hover { transform: none; }
+.opening h1 em { color: var(--mark); }
+.opening .sub { margin: 2.75rem 0 0 auto; max-width: 30rem; color: var(--soft); }
+.opening .sub p { margin: 0 0 1rem; }
+.opening .sub .mono { color: var(--ink); }
+
+.part { display: grid; grid-template-columns: 11rem minmax(0, 1fr); gap: 0 2.5rem; padding: 3.5rem 0; border-top: 1px solid var(--ink); }
+.part > h2 { margin: 0; font-family: var(--mono); font-weight: 500; font-size: 0.8rem; color: var(--soft); padding-top: 0.45rem; }
+
+.log { list-style: none; margin: 0; padding: 0; position: relative; }
+.log::before { content: ""; position: absolute; left: 0.3rem; top: 0.9rem; bottom: 0.9rem; width: 1px; background: var(--hair); }
+.log li { position: relative; display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); gap: 0 1.5rem; padding: 0 0 2.4rem 1.6rem; }
+.log li:last-child { padding-bottom: 0; }
+.log li::before { content: ""; position: absolute; left: 0; top: 0.62rem; width: 0.65rem; height: 0.65rem; border-radius: 50%; background: var(--paper); border: 1.5px solid var(--ink); }
+.log li.next::before { border-color: var(--mark); background: var(--mark); }
+.log .when { padding-top: 0.35rem; color: var(--soft); line-height: 1.5; }
+.log .when b { display: block; color: var(--ink); font-weight: 500; }
+.log li.next .when b { color: var(--mark); }
+.log h3 { margin: 0 0 0.35rem; font-family: var(--display); font-weight: 400; font-size: 1.9rem; line-height: 1.1; }
+.log h3 span { font-family: var(--serif); font-style: italic; font-size: 1.05rem; color: var(--soft); white-space: nowrap; }
+.log p { margin: 0; max-width: 36rem; }
+.log .cite { margin-top: 0.5rem; color: var(--soft); }
+
+.prose p { margin: 0 0 1.1rem; max-width: 38rem; }
+.prose p:first-child { font-size: 1.4rem; line-height: 1.4; }
+.prose p:last-child { margin-bottom: 0; }
+
+.index { list-style: none; margin: 0; padding: 0; }
+.index li { display: grid; grid-template-columns: minmax(0, 13rem) minmax(0, 1fr) auto; gap: 0 1.5rem; align-items: baseline; padding: 0.85rem 0; border-bottom: 1px solid var(--hair); }
+.index li:first-child { padding-top: 0.2rem; }
+.index li:last-child { border-bottom: 0; }
+.index .t { font-family: var(--display); font-size: 1.45rem; line-height: 1.2; }
+.index .d { color: var(--soft); }
+.index .mono { color: var(--soft); white-space: nowrap; }
+
+.papers { margin: 0; padding: 0; list-style: none; }
+.papers li { margin: 0 0 1rem; max-width: 40rem; }
+.papers li:last-child { margin: 0; }
+.papers .mono { display: block; color: var(--soft); margin-top: 0.15rem; }
+
+.closing { padding: 5rem 0 3rem; border-top: 1px solid var(--ink); }
+.closing p.big { font-family: var(--display); font-size: clamp(2rem, 4.6vw, 3.4rem); line-height: 1.08; margin: 0 0 2.5rem; max-width: 20ch; }
+.closing .row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem 2rem; color: var(--soft); }
+.closing .row nav { display: flex; flex-wrap: wrap; gap: 0.6rem 1.4rem; }
+
+@media (max-width: 46rem) {
+  body { font-size: 1.0625rem; }
+  .masthead nav { gap: 1rem; }
+  .opening { padding: 3.5rem 0 4.5rem; }
+  .opening .sub { margin-top: 2rem; }
+  .part { grid-template-columns: minmax(0, 1fr); padding: 2.5rem 0; }
+  .part > h2 { padding: 0 0 1.5rem; }
+  .log li { grid-template-columns: minmax(0, 1fr); }
+  .log .when { padding: 0.1rem 0 0.3rem; }
+  .log .when b { display: inline; margin-right: 0.6rem; }
+  .log h3 { font-size: 1.6rem; }
+  .index li { grid-template-columns: minmax(0, 1fr) auto; }
+  .index .d { grid-column: 1 / -1; }
+  .prose p:first-child { font-size: 1.25rem; }
 }
 </style>
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
-<header class="top">
-  <div class="wrap">
-    <a class="brand" href="/">Mukul Sharma</a>
-    <nav aria-label="Main">
-      <ul>
-        <li><a href="#shipped">Shipped</a></li>
-        <li><a href="#ai">AI work</a></li>
-        <li class="optional"><a href="#open-source">Open source</a></li>
-        <li><a href="Mukul_Sharma_Resume.pdf">Resume</a></li>
-      </ul>
+<div class="page">
+  <header class="masthead">
+    <a class="name" href="/">Mukul Sharma</a>
+    <nav class="mono" aria-label="Main">
+      <a href="Mukul_Sharma_Resume.pdf">resume</a>
+      <a href="https://github.com/elitecoder">github</a>
+      <a href="mailto:mukuls2308@gmail.com">email</a>
     </nav>
-  </div>
-</header>
+  </header>
 
-<main id="main" class="wrap">
-  <div class="hero">
-    <h1>Mukul Sharma</h1>
-    <p class="role">Senior Staff Engineer at Adobe · AI-native · Ships 1.0 products</p>
-    <p class="lede">For fifteen years I've taken products from their first commit to their first release. Today I also build the AI systems that help ship them.</p>
-    <div class="actions">
-      <a class="btn primary" href="Mukul_Sharma_Resume.pdf">Download resume (PDF)</a>
-      <a class="btn ghost" href="https://github.com/elitecoder">GitHub</a>
-      <a class="btn ghost" href="mailto:mukuls2308@gmail.com">Email me</a>
+  <main>
+    <section class="opening">
+      <h1>I take software from its first commit to <em>version&nbsp;1.0</em>, and lately I build the AI that helps ship it.</h1>
+      <div class="sub">
+        <p>Senior Staff Engineer at Adobe, where I work on Adobe Firefly Video Editor and Firefly video Assembler. Before that: iOS apps, mobile SDKs, and a car gadget that talked to Alexa.</p>
+        <p class="mono">San Jose, California · shipping since 2010</p>
+      </div>
+    </section>
+
+    <section class="part" aria-labelledby="h-releases">
+      <h2 id="h-releases">release history</h2>
+      <ol class="log" reversed>
+        <li class="next">
+          <div class="when mono"><b>beta</b>Nov 2026</div>
+          <div>
+            <h3>Firefly video Assembler <span>Adobe</span></h3>
+            <p>Leading delivery of Adobe's new video assembly product. Public beta ships this month.</p>
+          </div>
+        </li>
+        <li>
+          <div class="when mono"><b>v1</b>Apr 2026</div>
+          <div>
+            <h3>Architect <span>Adobe, internal</span></h3>
+            <p>An agent harness that turns a problem statement into a reviewed pull request with passing checks. It plans adversarially, writes the code and the tests, hardens the tests, and ships, with a person approving every change. 16+ engineers have run it about 2,000 times.</p>
+          </div>
+        </li>
+        <li>
+          <div class="when mono"><b>beta</b>Dec 2025</div>
+          <div>
+            <h3>Adobe Firefly Video Editor <span>Adobe</span></h3>
+            <p>I built the timeline editing core from the first commit: multiple tracks, trim, move, copy and paste, keyboard shortcuts. It opened as a public beta in December 2025 and reached 100K monthly users.</p>
+            <p class="cite mono"><a href="https://nofilmschool.com/adobe-firefly-video-editor-beta">No Film School on the public beta</a></p>
+          </div>
+        </li>
+        <li>
+          <div class="when mono"><b>launch</b>2023</div>
+          <div>
+            <h3>Adobe Express video <span>Adobe</span></h3>
+            <p>Led the team that built eight Video Quick Actions for the Adobe Express launch, and the team that shipped the first video timeline in Express for iPhone and iPad.</p>
+          </div>
+        </li>
+        <li>
+          <div class="when mono"><b>launch</b>Nov 2017</div>
+          <div>
+            <h3>Muse <span>Speak Music</span></h3>
+            <p>Led the design, development, and launch of an Alexa device for the car, and owned its iOS app. Over 1,000 people backed it on Indiegogo, for more than $70,000.</p>
+            <p class="cite mono"><a href="https://techcrunch.com/2017/11/14/muse-is-a-simple-dedicated-amazon-alexa-add-on-for-the-car/">TechCrunch on the launch</a></p>
+          </div>
+        </li>
+        <li>
+          <div class="when mono"><b>v1</b>2015</div>
+          <div>
+            <h3>mPulse Mobile <span>SOASTA</span></h3>
+            <p>As its architect, designed and built the mobile SDK, its API, and the analytics for network requests inside customers' apps.</p>
+          </div>
+        </li>
+        <li>
+          <div class="when mono"><b>launch</b>Jan 2012</div>
+          <div>
+            <h3>TouchTest <span>SOASTA</span></h3>
+            <p>On the launch team for TouchTest, test automation for iOS and Android apps.</p>
+            <p class="cite mono"><a href="https://www.informationweek.com/it-leadership/cloud-platform-stress-tests-mobile-apps">InformationWeek on the launch</a></p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="part" aria-labelledby="h-ai">
+      <h2 id="h-ai">on building with ai</h2>
+      <div class="prose">
+        <p>I treat coding agents like new teammates: they get the same reviews, the same tests, and the same bar for shipping as everyone else.</p>
+        <p>In six weeks this spring, my agent pipeline wrote the production code for more than 400 pull requests that I merged into Adobe Firefly's platform. I've merged 787 since April. The model isn't the trick. The scaffolding is: tests that must fail before a fix and pass after it, so a prompt change can't quietly make things worse, and rules that walk agents through the codebase the way a senior engineer would.</p>
+        <p>I wrote those rules for Adobe's video and Firefly code, taught engineers to use them, and helped teams like Lightroom and Firefly Boards start building this way. On my own team, I'm the senior engineer for 22 software and quality engineers.</p>
+      </div>
+    </section>
+
+    <section class="part" aria-labelledby="h-oss">
+      <h2 id="h-oss">open source</h2>
+      <ul class="index">
+        <li><a class="t" href="https://github.com/elitecoder/proofgate">ProofGate</a><span class="d">Agents say "done." ProofGate asks for receipts. Reliability checks for Claude Code, tuned on 94,000 real commands.</span><span class="mono">python</span></li>
+        <li><a class="t" href="https://github.com/elitecoder/assistant">Assistant</a><span class="d">A chief of staff for a fleet of coding agents. Your inbox, Slack, GitHub, and calendar, turned into one morning brief of decisions.</span><span class="mono">python</span></li>
+        <li><a class="t" href="https://github.com/elitecoder/perch">Perch</a><span class="d">Your Claude Code sessions, reachable from Slack on any device.</span><span class="mono">typescript</span></li>
+        <li><a class="t" href="https://github.com/elitecoder/debug-mode">debug-mode</a><span class="d">Hypothesis-driven debugging for coding agents, from servers and browsers to native iOS and Android.</span><span class="mono">javascript</span></li>
+        <li><a class="t" href="https://github.com/elitecoder/cmux-session-restore">cmux-session-restore</a><span class="d">Brings Claude Code sessions back after a restart or reboot.</span><span class="mono">python</span></li>
+      </ul>
+    </section>
+
+    <section class="part" aria-labelledby="h-work">
+      <h2 id="h-work">where i've worked</h2>
+      <ul class="index">
+        <li><span class="t">Adobe</span><span class="d">Sr. Computer Scientist 2 (Sr. Staff Engineer)</span><span class="mono">2021–now</span></li>
+        <li><span class="t">MobileIron</span><span class="d">Staff Software Engineer, iOS. Acquired by Ivanti.</span><span class="mono">2018–2021</span></li>
+        <li><span class="t">Speak Music</span><span class="d">iOS Platform Lead</span><span class="mono">2017–2018</span></li>
+        <li><span class="t">8x8</span><span class="d">Senior Mobile Engineer</span><span class="mono">2015–2017</span></li>
+        <li><span class="t">SOASTA</span><span class="d">Sr. Software Engineer, then Tech Lead</span><span class="mono">2011–2015</span></li>
+        <li><span class="t">SumTotal Systems</span><span class="d">Software Engineer</span><span class="mono">2010–2011</span></li>
+      </ul>
+    </section>
+
+    <section class="part" aria-labelledby="h-papers">
+      <h2 id="h-papers">patents &amp; papers</h2>
+      <ul class="papers">
+        <li>Load test charts with standard deviation and percentile statistics<span class="mono">US Patent 9,251,035 · 2016</span></li>
+        <li>Cloud-based custom metric/timer definitions and real-time analytics of mobile apps<span class="mono">US 2015/0067527 · 2015</span></li>
+        <li>SHIELD: Social Sensing and Help in Emergency using Mobile Devices<span class="mono">IEEE Globecom · 2010 · with G. S. Thakur and A. Helmy</span></li>
+        <li>M.S. in Computer Science, University of Florida<span class="mono">2010</span></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="closing">
+    <p class="big">Building a 1.0? I'd like to hear about it.</p>
+    <div class="row mono">
+      <nav aria-label="Contact">
+        <a href="mailto:mukuls2308@gmail.com">mukuls2308@gmail.com</a>
+        <a href="https://github.com/elitecoder">github.com/elitecoder</a>
+        <a href="Mukul_Sharma_Resume.pdf">resume (pdf)</a>
+      </nav>
+      <span>© 2026 Mukul Sharma</span>
     </div>
-  </div>
-
-  <div class="stats" role="list">
-    <div class="stat" role="listitem"><b>15</b><span>years taking products to their first release</span></div>
-    <div class="stat" role="listitem"><b>100K</b><span>monthly users of Adobe Firefly Video Editor in public beta</span></div>
-    <div class="stat" role="listitem"><b>400+</b><span>merged PRs in six weeks, written by my agent pipeline</span></div>
-    <div class="stat" role="listitem"><b>22</b><span>engineers I lead as the senior engineer on my team</span></div>
-  </div>
-
-  <section id="shipped" aria-labelledby="shipped-h">
-    <h2 id="shipped-h">1.0 products I've shipped</h2>
-    <ol class="timeline" reversed>
-      <li>
-        <div class="year">2026</div>
-        <div>
-          <h3>Firefly video Assembler <span class="where">· Adobe</span><span class="tag">Public beta, Nov 2026</span></h3>
-          <p>I'm leading delivery of Adobe's new video assembly product to its public beta.</p>
-        </div>
-      </li>
-      <li>
-        <div class="year">2026</div>
-        <div>
-          <h3>Architect <span class="where">· Adobe, internal</span></h3>
-          <p>An agent harness that turns a problem statement into a reviewed pull request with passing checks. It plans adversarially, writes code and tests, hardens the tests, and ships, with a person reviewing every change. 16+ engineers have run it about 2,000 times.</p>
-        </div>
-      </li>
-      <li>
-        <div class="year">2023–25</div>
-        <div>
-          <h3>Adobe Firefly Video Editor <span class="where">· Adobe</span></h3>
-          <p>I built the timeline editing core, from multi-track editing to trim, move, copy and paste, and keyboard shortcuts, starting at the first commit. It reached public beta in December 2025 and 100K monthly active users.</p>
-          <p class="source"><a href="https://nofilmschool.com/adobe-firefly-video-editor-beta">Read the public beta coverage on No Film School</a></p>
-        </div>
-      </li>
-      <li>
-        <div class="year">2023</div>
-        <div>
-          <h3>Adobe Express Video Quick Actions <span class="where">· Adobe</span></h3>
-          <p>I led the team that built 8 Video Quick Actions for the general release of Adobe Express.</p>
-        </div>
-      </li>
-      <li>
-        <div class="year">2022–23</div>
-        <div>
-          <h3>Adobe Express mobile video timeline <span class="where">· Adobe</span></h3>
-          <p>I led the team that delivered the first version of the video timeline in Adobe Express for iPhone and iPad.</p>
-        </div>
-      </li>
-      <li>
-        <div class="year">2017</div>
-        <div>
-          <h3>Muse <span class="where">· Speak Music</span></h3>
-          <p>I led the design, development, and launch of Muse, an Alexa device for the car, and owned its iOS app. It raised over $70,000 from more than 1,000 Indiegogo backers.</p>
-          <p class="source"><a href="https://techcrunch.com/2017/11/14/muse-is-a-simple-dedicated-amazon-alexa-add-on-for-the-car/">Read the TechCrunch launch story</a></p>
-        </div>
-      </li>
-      <li>
-        <div class="year">2014–15</div>
-        <div>
-          <h3>mPulse Mobile <span class="where">· SOASTA</span></h3>
-          <p>As architect, I designed and built the mobile SDK, its API, and the analytics for network requests in customers' apps.</p>
-        </div>
-      </li>
-      <li>
-        <div class="year">2012</div>
-        <div>
-          <h3>TouchTest <span class="where">· SOASTA</span></h3>
-          <p>I was on the launch team for TouchTest, test automation for iOS and Android apps.</p>
-          <p class="source"><a href="https://www.informationweek.com/it-leadership/cloud-platform-stress-tests-mobile-apps">Read the InformationWeek launch story</a></p>
-        </div>
-      </li>
-    </ol>
-  </section>
-
-  <section id="ai" aria-labelledby="ai-h">
-    <h2 id="ai-h">AI engineering</h2>
-    <p class="intro">I treat AI agents as part of the engineering team, with the same review, testing, and release standards as people.</p>
-    <ul class="points">
-      <li>Merged 400+ pull requests in six weeks into Adobe Firefly's platform code, with the production code written by my agent pipeline. I've merged 787 since April 2026.</li>
-      <li>Pinned agent and prompt behavior with tests that must fail before a fix and pass after it, so a prompt edit can't quietly make things worse.</li>
-      <li>Wrote the skills and rules that guide AI coding in Adobe's video and Firefly codebases, and taught engineers to use them.</li>
-      <li>Helped other Adobe teams, including Lightroom and Firefly Boards, start building with coding agents.</li>
-    </ul>
-  </section>
-
-  <section id="open-source" aria-labelledby="os-h">
-    <h2 id="os-h">Open source</h2>
-    <div class="cards">
-      <a class="card" href="https://github.com/elitecoder/proofgate">
-        <h3>ProofGate</h3>
-        <p>Agents say "done." ProofGate asks for receipts. Reliability checks for Claude Code, tuned on 94,000 real commands.</p>
-        <small>Python</small>
-      </a>
-      <a class="card" href="https://github.com/elitecoder/assistant">
-        <h3>Assistant</h3>
-        <p>A chief of staff for a fleet of coding agents. It turns your inbox, Slack, GitHub, calendar, and goals into one morning brief of decisions.</p>
-        <small>Python</small>
-      </a>
-      <a class="card" href="https://github.com/elitecoder/perch">
-        <h3>Perch</h3>
-        <p>Keep your Claude Code sessions within reach from Slack, on any device.</p>
-        <small>TypeScript</small>
-      </a>
-      <a class="card" href="https://github.com/elitecoder/debug-mode">
-        <h3>debug-mode</h3>
-        <p>A hypothesis-driven debugging skill for coding agents, covering servers, browsers, and native iOS and Android apps.</p>
-        <small>JavaScript</small>
-      </a>
-      <a class="card" href="https://github.com/elitecoder/cmux-session-restore">
-        <h3>cmux-session-restore</h3>
-        <p>Brings Claude Code sessions in cmux back automatically after a restart or reboot.</p>
-        <small>Python</small>
-      </a>
-    </div>
-  </section>
-
-  <section id="experience" aria-labelledby="exp-h">
-    <h2 id="exp-h">Experience</h2>
-    <ul class="jobs">
-      <li><span><strong>Adobe</strong> · Sr. Computer Scientist 2 (Sr. Staff Engineer)</span><span class="when">2021 – now</span></li>
-      <li><span><strong>MobileIron</strong>, acquired by Ivanti · Staff Software Engineer, iOS</span><span class="when">2018 – 2021</span></li>
-      <li><span><strong>Speak Music</strong> · iOS Platform Lead</span><span class="when">2017 – 2018</span></li>
-      <li><span><strong>8x8</strong> · Senior Mobile Engineer</span><span class="when">2015 – 2017</span></li>
-      <li><span><strong>SOASTA</strong> · Sr. Software Engineer, then Tech Lead</span><span class="when">2011 – 2015</span></li>
-      <li><span><strong>SumTotal Systems</strong> · Software Engineer</span><span class="when">2010 – 2011</span></li>
-    </ul>
-  </section>
-
-  <section id="patents" aria-labelledby="pat-h">
-    <h2 id="pat-h">Patents and publications</h2>
-    <ul class="plain">
-      <li>Load test charts with standard deviation and percentile statistics<span>US Patent 9,251,035, issued February 2016</span></li>
-      <li>Cloud-based custom metric/timer definitions and real-time analytics of mobile apps<span>US 2015/0067527, published March 2015</span></li>
-      <li>SHIELD: Social Sensing and Help in Emergency using Mobile Devices<span>G. S. Thakur, M. Sharma, A. Helmy. IEEE Globecom 2010</span></li>
-    </ul>
-  </section>
-
-  <section id="education" aria-labelledby="edu-h">
-    <h2 id="edu-h">Education</h2>
-    <p>M.S. in Computer Science, University of Florida, 2010</p>
-  </section>
-</main>
-
-<footer>
-  <div class="wrap">
-    <span>© 2026 Mukul Sharma</span>
-    <span><a href="mailto:mukuls2308@gmail.com">mukuls2308@gmail.com</a> · <a href="https://github.com/elitecoder">github.com/elitecoder</a></span>
-  </div>
-</footer>
+  </footer>
+</div>
 </body>
 </html>
