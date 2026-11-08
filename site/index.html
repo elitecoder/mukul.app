@@ -107,14 +107,14 @@ svg.ink a{text-decoration:none}
 .ai .after{margin:1.75rem 0 0;font:italic 400 1.05rem/1.5 var(--serif);color:var(--muted);max-width:36rem}
 .scaffold{max-width:22rem}
 
-.tools{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:3.5rem 5rem;margin-top:2.5rem}
+.tools{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem 5rem;margin-top:2.5rem;padding:0;list-style:none}
 .tool{margin:0}
-.tool-head{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;border-top:1px solid var(--ink);padding-top:.7rem;margin-bottom:1.1rem}
+.tool-head{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;border-top:1px solid var(--ink);padding-top:.7rem;margin-bottom:.5rem}
 .tn{font:400 1.75rem/1.1 var(--display);text-decoration:none}
 .tool{position:relative}.tn::before{content:"";position:absolute;inset:0}.tn::after{content:"\2197";margin-left:.35rem;font:400 .95rem var(--mono);color:var(--muted);vertical-align:.35em;display:inline-block;text-decoration:none}.tn:focus-visible{outline:none}.tool:has(.tn:focus-visible){outline:2px solid var(--mark);outline-offset:10px;border-radius:2px}.tool:hover .tn,.tool:has(.tn:focus-visible) .tn{color:var(--mark);text-decoration:underline;text-underline-offset:.15em}.tool:hover .tn::after{color:var(--mark)}.tool svg.ink *{transition:stroke .15s}.tool:hover svg.ink *:not(text):not(tspan){stroke:var(--mark)}@media (prefers-reduced-motion:reduce){.tool svg.ink *{transition:none}}
 .lang{font:400 .75rem var(--mono);color:var(--muted)}
 .tool svg{max-width:26rem}
-.tool .cap1{margin-top:1rem;font-style:italic;color:var(--ink);max-width:30rem}
+.tool .cap1{margin-top:0;font-style:italic;color:var(--ink);max-width:30rem}
 
 .papers{list-style:none;margin:2rem 0 0;padding:0;max-width:46rem}
 .papers li{padding:.8rem 0;border-top:1px solid var(--faint)}
@@ -452,64 +452,15 @@ svg.ink .note{font-size:15px}
     <hr class="rule" style="margin-top:0">
     <p class="k" style="margin-top:2.5rem">open source · github.com/elitecoder</p>
     <h2 class="h" id="h-oss">Tools for working with coding <em>agents</em>.</h2>
-    <div class="tools"><figure class="tool"><figcaption class="tool-head"><a class="tn" href="https://github.com/elitecoder/forge">Forge</a><span class="lang">python</span></figcaption><svg class="ink" viewBox="-4 0 368 156" role="img" aria-label="Forge: a problem splits into two competing plans, critics attack both, a judge merges the best of each, and a pipeline turns the plan into a pull request.">
-<circle class="inkf" cx="12" cy="76" r="5"/><text class="t" x="12" y="104" text-anchor="middle">problem</text>
-<path d="M17 76 H34 C58 76 58 34 82 34 H176 C198 34 198 76 207 76"/>
-<path d="M34 76 C58 76 58 118 82 118 H176 C198 118 198 76 207 76"/>
-<circle class="f" cx="92" cy="34" r="6"/><circle class="f" cx="166" cy="34" r="6"/>
-<circle class="f" cx="92" cy="118" r="6"/><circle class="f" cx="166" cy="118" r="6"/>
-<text x="92" y="18" text-anchor="middle">plan a</text><text x="166" y="18" text-anchor="middle">critic</text>
-<text x="92" y="144" text-anchor="middle">plan b</text><text x="166" y="144" text-anchor="middle">critic</text>
-<circle class="f" cx="214" cy="76" r="7"/><text x="216" y="118" text-anchor="middle">judge</text>
-<path d="M221 76 H240"/>
-<rect class="w" x="240" y="58" width="82" height="36" rx="4"/><text x="281" y="81" text-anchor="middle">pipeline</text>
-<path class="m" d="M322 76 H344"/><path class="m" d="M338 70 l6 6 l-6 6"/><circle class="mf" cx="352" cy="76" r="5"/>
-<text class="t mt" x="352" y="104" text-anchor="middle">pr</text></svg><p class="cap1">Competing AI architects, adversarial critics, and a judge plan the work; a step-by-step pipeline ships it.</p></figure><figure class="tool"><figcaption class="tool-head"><a class="tn" href="https://github.com/elitecoder/proofgate">ProofGate</a><span class="lang">python</span></figcaption><svg class="ink" viewBox="-4 0 368 156" role="img" aria-label="ProofGate: an agent reports done, a gate asks for proof, work with proof passes and work without proof goes back.">
-<rect class="f" x="4" y="50" width="78" height="40" rx="4"/><text x="43" y="75" text-anchor="middle">agent</text>
-<path class="thin" d="M14 10 H86 a5 5 0 0 1 5 5 v14 a5 5 0 0 1 -5 5 H40 l-8 10 l0 -10 H14 a5 5 0 0 1 -5 -5 v-14 a5 5 0 0 1 5 -5 z"/>
-<text class="si" x="50" y="28" text-anchor="middle">“done.”</text>
-<path d="M82 70 H180"/><path d="M172 64 l8 6 l-8 6"/>
-<path class="m" d="M196 34 V106 M188 34 H204 M188 106 H204" style="stroke-width:3"/>
-<text class="mt" x="196" y="22" text-anchor="middle">receipts?</text>
-<path d="M210 70 H294"/><path d="M286 64 l8 6 l-8 6"/>
-<circle class="f" cx="314" cy="70" r="13"/><path d="M307 70 l5 5 l9 -10"/>
-<text class="t" x="314" y="104" text-anchor="middle">verified</text>
-<path class="d" d="M196 112 V126 H43 V98"/><path d="M37 104 l6 -6 l6 6"/>
-<text class="t" x="120" y="148" text-anchor="middle">no proof: back to work</text></svg><p class="cap1">Agents say “done.” ProofGate asks for receipts. Tuned on 94,000 real commands.</p></figure><figure class="tool"><figcaption class="tool-head"><a class="tn" href="https://github.com/elitecoder/assistant">Assistant</a><span class="lang">python</span></figcaption><svg class="ink" viewBox="-4 0 368 156" role="img" aria-label="Assistant: your tasks and Slack messages feed one node that opens and watches a fleet of agent sessions.">
-<text x="64" y="40" text-anchor="end">tasks</text><text x="64" y="116" text-anchor="end">slack</text>
-<path d="M72 36 C130 36 120 76 168 76"/><path d="M72 112 C130 112 120 76 168 76"/>
-<circle class="f" cx="176" cy="76" r="8"/>
-<path d="M184 76 C210 76 214 27 238 27"/><path d="M184 76 H238"/><path d="M184 76 C210 76 214 125 238 125"/>
-<rect class="f" x="244" y="14" width="66" height="26"/><rect class="mf" x="252" y="23" width="8" height="8"/><path class="thin" d="M266 27 H300"/>
-<rect class="f" x="244" y="63" width="66" height="26"/><rect x="252" y="72" width="8" height="8"/><path class="thin" d="M266 76 H296"/>
-<rect class="f" x="244" y="112" width="66" height="26"/><rect x="252" y="121" width="8" height="8"/><path class="thin" d="M266 125 H300"/>
-<text class="t" x="277" y="152" text-anchor="middle">agent sessions</text></svg><p class="cap1">Runs my fleet of Claude Code agents. Since May it has started 500+ agent sessions.</p></figure><figure class="tool"><figcaption class="tool-head"><a class="tn" href="https://github.com/elitecoder/perch">Perch</a><span class="lang">typescript</span></figcaption><svg class="ink" viewBox="-4 0 368 156" role="img" aria-label="Perch: a Claude Code session on your computer talks through Slack to your phone or laptop, in both directions.">
-<rect class="f" x="4" y="40" width="96" height="66" rx="4"/><path class="thin" d="M4 54 H100"/>
-<circle class="inkf" cx="13" cy="47" r="1.6"/><circle class="inkf" cx="20" cy="47" r="1.6"/>
-<path d="M16 70 l7 6 l-7 6 M30 84 H44"/>
-<text class="t" x="52" y="130" text-anchor="middle">claude code</text>
-<path d="M100 66 H156"/><path d="M150 60 l6 6 l-6 6"/><path d="M100 82 H156"/><path d="M106 76 l-6 6 l6 6"/>
-<circle class="f" cx="180" cy="74" r="22"/>
-<path class="m" d="M173 62 l-3 24 M187 62 l-3 24 M166 69 H193 M164 80 H191"/>
-<text class="t" x="180" y="130" text-anchor="middle">slack</text>
-<path d="M204 66 H252"/><path d="M246 60 l6 6 l-6 6"/><path d="M204 82 H252"/><path d="M210 76 l-6 6 l6 6"/>
-<rect class="f" x="262" y="40" width="26" height="46" rx="4"/><path class="thin" d="M270 46 H280"/>
-<rect class="f" x="298" y="52" width="52" height="34" rx="3"/><path d="M292 92 H356"/>
-<text class="t" x="310" y="130" text-anchor="middle">any device</text></svg><p class="cap1">Your Claude Code sessions, reachable from Slack on any device.</p></figure><figure class="tool"><figcaption class="tool-head"><a class="tn" href="https://github.com/elitecoder/debug-mode">debug-mode</a><span class="lang">javascript</span></figcaption><svg class="ink" viewBox="-4 0 368 156" role="img" aria-label="debug-mode: a loop of hypothesis, instrument, and observe, applied to servers, browsers, iOS, and Android.">
-<circle cx="100" cy="80" r="44"/><path d="M139.4 50.3 L138.1 58.0 L130.8 55.3"/><path d="M106.0 129.0 L100.0 124.0 L106.0 119.0"/><path d="M54.6 60.7 L61.9 58.0 L63.2 65.7"/><circle class="mf" cx="100" cy="36.0" r="6"/><text class="mt" x="100" y="20" text-anchor="middle">hypothesis</text><circle class="f" cx="138.1" cy="102.0" r="6"/><text x="142.1" y="146" text-anchor="middle" dx="10">instrument</text><circle class="f" cx="61.9" cy="102.0" r="6"/><text x="57.9" y="146" text-anchor="middle" dx="-8">observe</text>
-<path class="thin d" d="M164 80 H226"/>
-<text x="244" y="34">server</text><text x="244" y="66">browser</text><text x="244" y="98">ios</text><text x="244" y="130">android</text>
-<path class="thin" d="M226 80 C234 80 232 30 240 30 M226 80 C234 80 232 62 240 62 M226 80 C234 80 232 94 240 94 M226 80 C234 80 232 126 240 126"/></svg><p class="cap1">Hypothesis-driven debugging for coding agents, from servers and browsers to native iOS and Android.</p></figure><figure class="tool"><figcaption class="tool-head"><a class="tn" href="https://github.com/elitecoder/cmux-session-restore">cmux-session-restore</a><span class="lang">python</span></figcaption><svg class="ink" viewBox="-4 0 368 156" role="img" aria-label="cmux-session-restore: three Claude Code sessions survive a restart and come back as they were.">
-<rect class="f" x="4" y="24" width="88" height="26" rx="3"/><rect class="f" x="4" y="62" width="88" height="26" rx="3"/><rect class="f" x="4" y="100" width="88" height="26" rx="3"/>
-<path class="thin" d="M12 37 l5 4 l-5 4 M12 75 l5 4 l-5 4 M12 113 l5 4 l-5 4 M24 45 H54 M24 83 H66 M24 121 H48"/>
-<path d="M100 76 H140"/>
-<path class="m" d="M150 40 l14 18 l-14 18 l14 18 l-14 18" style="stroke-width:2.5"/>
-<text class="mt" x="157" y="144" text-anchor="middle">restart</text>
-<path d="M174 76 H222"/><path d="M216 70 l6 6 l-6 6"/>
-<rect class="f" x="232" y="24" width="88" height="26" rx="3"/><rect class="f" x="232" y="62" width="88" height="26" rx="3"/><rect class="f" x="232" y="100" width="88" height="26" rx="3"/>
-<path class="thin" d="M240 37 l5 4 l-5 4 M240 75 l5 4 l-5 4 M240 113 l5 4 l-5 4 M252 45 H282 M252 83 H294 M252 121 H276"/>
-<path d="M330 34 l4 4 l7 -8 M330 72 l4 4 l7 -8 M330 110 l4 4 l7 -8"/>
-<text class="t" x="48" y="144" text-anchor="middle">before</text><text class="t" x="276" y="144" text-anchor="middle">after</text></svg><p class="cap1">Brings Claude Code sessions back after a restart or reboot.</p></figure></div>
+    <ul class="tools">
+      <li class="tool"><div class="tool-head"><a class="tn" href="https://github.com/elitecoder/forge">Forge</a><span class="lang">python</span></div><p class="cap1">Competing AI architects, adversarial critics, and a judge plan the work; a step-by-step pipeline ships it.</p></li>
+      <li class="tool"><div class="tool-head"><a class="tn" href="https://github.com/elitecoder/proofgate">ProofGate</a><span class="lang">python</span></div><p class="cap1">Agents say “done.” ProofGate asks for receipts. Tuned on 94,000 real commands.</p></li>
+      <li class="tool"><div class="tool-head"><a class="tn" href="https://github.com/elitecoder/assistant">Assistant</a><span class="lang">python</span></div><p class="cap1">Runs my fleet of Claude Code agents. Since May it has started 500+ agent sessions.</p></li>
+      <li class="tool"><div class="tool-head"><a class="tn" href="https://github.com/elitecoder/perch">Perch</a><span class="lang">typescript</span></div><p class="cap1">Your Claude Code sessions, reachable from Slack on any device.</p></li>
+      <li class="tool"><div class="tool-head"><a class="tn" href="https://github.com/elitecoder/debug-mode">debug-mode</a><span class="lang">javascript</span></div><p class="cap1">Hypothesis-driven debugging for coding agents, from servers and browsers to native iOS and Android.</p></li>
+      <li class="tool"><div class="tool-head"><a class="tn" href="https://github.com/elitecoder/cmux-session-restore">cmux-session-restore</a><span class="lang">python</span></div><p class="cap1">Brings Claude Code sessions back after a restart or reboot.</p></li>
+      <li class="tool"><div class="tool-head"><a class="tn" href="https://github.com/elitecoder/destiny-ghost">Destiny Ghost</a><span class="lang">typescript</span></div><p class="cap1">An MCP server that lets your AI grade, move, and lock your Destiny 2 gear. Built for my own vault, after 1,400 raid clears.</p></li>
+    </ul>
   </section>
 
   <section class="wrap part" aria-labelledby="h-papers">
